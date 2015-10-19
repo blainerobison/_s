@@ -12,7 +12,7 @@
    ========================================================================== */
 
 .alignleft {
-   @include mq( $from: tablet ) {
+   @include mq( $from: sm ) {
        margin-right: 1.3em;
        margin-bottom: 1.3em;
        display: inline;
@@ -21,7 +21,7 @@
 }
 
 .alignright {
-   @include mq( $from: tablet ) {
+   @include mq( $from: sm ) {
        margin-left: 1.3em;
        margin-bottom: 1.3em;
        display: inline;
@@ -30,7 +30,7 @@
 }
 
 .aligncenter {
-   @include mq( $from: tablet ) {
+   @include mq( $from: sm ) {
        clear: both;
        display: block;
        margin: 0 auto;

@@ -3,15 +3,15 @@
 // Breakpoints
 // ==========================================================================
 
-    $mobile                                   : 320px;
-    $mobile-landscape                         : 480px;
-    $mobile-wide                              : 600px;
-    $tablet                                   : 768px;
-    $tablet-landscape                         : 1024px;
-    $site                                     : 960px;
-    $site-constraint                          : 1200px;
-    $desktop                                  : 1280px;
-    $desktop-wide                             : 1500px;
+    $xxxs                                                  : 320px; // mobile
+    $xxs                                                   : 480px; // mobile-landscape
+    $xs                                                    : 600px; // mobile-wide
+    $sm                                                    : 768px; // tablet
+    $md                                                    : 960px; // site
+    $lg                                                    : 1024px; // tablet-landscape
+    $xl                                                    : 1200px; // site-constraint
+    $xxl                                                   : 1280px; // desktop
+    $xxxl                                                  : 1500px; // desktop-wide
 
     // Project Specific
     // These should also be added to $mq-breakpoints map.
@@ -28,15 +28,15 @@
     // across team members. It will improve communication between
     // stakeholders, designers, developers, and testers.
     $mq-breakpoints: (
-        mobile                               : $mobile,
-        mobile-landscape                     : $mobile-landscape,
-        mobile-wide                          : $mobile-wide,
-        tablet                               : $tablet,
-        tablet-landscape                     : $tablet-landscape,
-        site                                 : $site,
-        site-constraint                      : $site-constraint,
-        desktop                              : $desktop,
-        desktop-wide                         : $desktop-wide,
+        xxxs                                               : $xxxs,
+        xxs                                                : $xxs,
+        xs                                                 : $xs,
+        sm                                                 : $sm,
+        md                                                 : $md,
+        lg                                                 : $lg,
+        xl                                                 : $xl,
+        xxl                                                : $xxl,
+        xxxl                                               : $xxxl
 
         // Project Specific
     );
@@ -44,7 +44,7 @@
     // Define the breakpoint from the $mq-breakpoints list that should
     // be used as the target width when outputting a static stylesheet
     // (i.e. when $mq-responsive is set to 'false').
-    $mq-static-breakpoint: tablet;
+    $mq-static-breakpoint: sm;
 
     // Customize the media type (e.g. `@media screen` or `@media print`)
     // By default sass-mq uses an "all" media type (`@media all and …`)

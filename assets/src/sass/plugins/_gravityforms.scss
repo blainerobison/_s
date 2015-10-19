@@ -7,7 +7,7 @@
     .gform_wrapper .top_label input.medium,
     .gform_wrapper .top_label select.medium {
         width: 100%;
-        @include mq( $from: tablet ) {
+        @include mq( $from: sm ) {
             width: 47%;
         }
     }

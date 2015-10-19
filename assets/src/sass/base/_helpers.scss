@@ -103,13 +103,13 @@
 }
 
 .text-center--mobile {
-    @include mq( $until: tablet ) {
+    @include mq( $until: sm ) {
         text-align: center;
     }
 }
 
 .text-center--desktop {
-    @include mq( $from: tablet ) {
+    @include mq( $from: sm ) {
         text-align: center;
     }
 }
@@ -119,13 +119,13 @@
 }
 
 .text-right--mobile {
-    @include mq( $until: tablet ) {
+    @include mq( $until: sm ) {
         text-align: right;
     }
 }
 
 .text-right--desktop {
-    @include mq( $from: tablet ) {
+    @include mq( $from: sm ) {
         text-align: right;
     }
 }
@@ -166,13 +166,13 @@
    ========================================================================== */
 
 .hide-on-mobile {
-    @include mq( $until: tablet ) {
+    @include mq( $until: sm ) {
         display: none !important;
     }
 }
 
 .hide-on-desktop {
-    @include mq( $from: tablet ) {
+    @include mq( $from: sm ) {
         display: none !important;
     }
 }

@@ -100,7 +100,7 @@
         margin: 0;
         padding: 0;
         list-style-type: none;
-        @include mq( $from: tablet ) {
+        @include mq( $from: sm ) {
             margin: 0 0 0 1em;
         }
     }

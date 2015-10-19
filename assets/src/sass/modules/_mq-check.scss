@@ -19,60 +19,78 @@
     display: none;
 
     &:before {
-        content: "mobile";
+        content: "xxxs";
     }
 }
-@include mq( $from: mobile-landscape ) {
+@include mq( $from: xxs ) {
     .mq-state {
         z-index: 10;
 
         &:before {
-            content: "mobile-landscape";
+            content: "xxs";
         }
     }
 }
-@include mq( $from: mobile-wide ) {
+@include mq( $from: xs ) {
     .mq-state {
         z-index: 15;
 
         &:before {
-            content: "mobile-wide";
+            content: "xs";
         }
     }
 }
-@include mq( $from: tablet ) {
+@include mq( $from: sm ) {
     .mq-state {
         z-index: 20;
 
         &:before {
-            content: "tablet";
+            content: "sm";
         }
     }
 }
-@include mq( $from: tablet-landscape ) {
+@include mq( $from: md ) {
     .mq-state {
         z-index: 25;
 
         &:before {
-            content: "tablet-landscape";
+            content: "md";
         }
     }
 }
-@include mq( $from: site-constraint ) {
+@include mq( $from: lg ) {
     .mq-state {
         z-index: 30;
 
         &:before {
-            content: "site-constraint";
+            content: "lg";
         }
     }
 }
-@include mq( $from: desktop ) {
+@include mq( $from: xl ) {
     .mq-state {
         z-index: 35;
 
         &:before {
-            content: "desktop";
+            content: "xl";
+        }
+    }
+}
+@include mq( $from: xxl ) {
+    .mq-state {
+        z-index: 40;
+
+        &:before {
+            content: "xxl";
+        }
+    }
+}
+@include mq( $from: xxxl ) {
+    .mq-state {
+        z-index: 45;
+
+        &:before {
+            content: "xxxl";
         }
     }
 }

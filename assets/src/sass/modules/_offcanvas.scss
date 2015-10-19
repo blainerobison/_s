@@ -12,19 +12,19 @@
     position: relative;
 
     .js-ready & {
-        @include mq( $until: tablet ) {
+        @include mq( $until: sm ) {
             right: 0;
         }
     }
 
     .js-nav & {
-        @include mq( $until: tablet ) {
+        @include mq( $until: sm ) {
             right: 70%;
         }
     }
 
     .csstransforms3d.csstransitions.js-ready & {
-        @include mq( $until: tablet ) {
+        @include mq( $until: sm ) {
             right: 0 !important;
             @include transform( translate3d( 0, 0, 0 ) );
             @include transition-duration( 500ms );
@@ -34,7 +34,7 @@
     }
 
     .csstransforms3d.csstransitions.js-nav & {
-        @include mq( $until: tablet ) {
+        @include mq( $until: sm ) {
             @include transform( translate3d( -70%, 0, 0 ) scale3d( 1, 1, 1 ) );
         }
 
@@ -42,7 +42,7 @@
 }
 
 .offcanvas { // #nav
-    @include mq( $until: tablet ) {
+    @include mq( $until: sm ) {
         position: absolute;
         top: 0;
         width: 100%;
@@ -56,14 +56,14 @@
     }
 
     &:not(:target) {
-        @include mq( $until: tablet ) {
+        @include mq( $until: sm ) {
             z-index: 1;
             height: 0;
         }
     }
 
     .js-ready & {
-        @include mq( $until: tablet ) {
+        @include mq( $until: sm ) {
             height: 100%;
             width: 70%;
             right: -70%;
@@ -77,7 +77,7 @@
     }
 
     .csstransforms3d.csstransitions.js-ready & {
-        @include mq( $until: tablet ) {
+        @include mq( $until: sm ) {
             right: 0;
             @include transform( translate3d( 100%, 0, 0 ) );
             @include backface-visibility( hidden );
@@ -87,7 +87,7 @@
     .csstransforms3d.csstransitions.js-ready & {
 
         .offcanvas-wrap {
-            @include mq( $until: tablet ) {
+            @include mq( $until: sm ) {
                 opacity: .7;
                 @include transition( opacity 300ms 100ms, transform 500ms ease );
                 @include transform( translate3d( -70%, 0, 0 ) scale3d( .9, .9, .9 ) );
@@ -99,7 +99,7 @@
     .csstransforms3d.csstransitions.js-nav & {
 
         .offcanvas-wrap {
-            @include mq( $until: tablet ) {
+            @include mq( $until: sm ) {
                 opacity: 1;
                 @include transform( translate3d( 0, 0, 0 ) );
             }
@@ -107,7 +107,7 @@
     }
 
     .offcanvas-wrap {
-        @include mq( $until: tablet ) {
+        @include mq( $until: sm ) {
             margin: 0 auto;
             z-index: 2;
             position: relative;
@@ -118,7 +118,7 @@
      * May be overqualified/redundant if styling in _modules.scss. Rereference '.main' and .main__link'
      */
     .main {
-        @include mq( $until: tablet ) {
+        @include mq( $until: sm ) {
             margin: 0;
             padding: 0;
             list-style-type: none;
@@ -126,20 +126,20 @@
         }
 
         > li {
-            @include mq( $until: tablet ) {
+            @include mq( $until: sm ) {
                 display: block;
                 border-bottom: 1px solid $offcanvas-link-border-color;
             }
 
             a {
-                @include mq( $until: tablet ) {
+                @include mq( $until: sm ) {
                     padding: 1em;
                     display: block;
                     color: $offcanvas-link-color;
                 }
 
                 &:focus, &:hover {
-                    @include mq( $until: tablet ) {
+                    @include mq( $until: sm ) {
                         color: $offcanvas-link-color-hover;
                         background-color: $offcanvas-link-background-color-hover;
                     }
@@ -176,7 +176,7 @@
         background-color: transparent;
     }
 
-    @include mq( $until: tablet ) {
+    @include mq( $until: sm ) {
         display: block;
         float: right;
     }
