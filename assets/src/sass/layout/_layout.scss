@@ -74,46 +74,73 @@
    ========================================================================== */
 
 .l-section {
-    padding: 0 .5em;
+    @include rem( 'padding', 0 8px );
 }
 
-.l-section--xs {
-    padding: .5em;
-}
-
-.l-section--sm {
-    padding: 1em .5em;
+.l-section-xxs {
+    @include rem( 'padding', 8px );
 
     @include mq( $until: sm ) {
-        padding-top: 1em;
-        padding-bottom: 1em;
+        @include rem( 'padding-top', 16px );
+        @include rem( 'padding-bottom', 16px );
     }
 }
 
-.l-section--md {
-    padding: 2em .5em;
+.l-section-xs {
+    @include rem( 'padding', 16px 8px );
+}
+
+.l-section-sm {
+    @include rem( 'padding', 24px 8px );
 
     @include mq( $until: sm ) {
-        padding-top: 1em;
-        padding-bottom: 1em;
+        @include rem( 'padding-top', 16px );
+        @include rem( 'padding-bottom', 16px );
     }
 }
 
-.l-section--lg {
-    padding: 3em .5em;
+.l-section-md {
+    @include rem( 'padding', 32px 8px );
 
     @include mq( $until: sm ) {
-        padding-top: 1em;
-        padding-bottom: 1em;
+        @include rem( 'padding-top', 16px );
+        @include rem( 'padding-bottom', 16px );
     }
 }
 
-.l-section--xl {
-    padding: 4em .5em;
+.l-section-lg {
+    @include rem( 'padding', 48px 8px );
 
     @include mq( $until: sm ) {
-        padding-top: 1em;
-        padding-bottom: 1em;
+        @include rem( 'padding-top', 16px );
+        @include rem( 'padding-bottom', 16px );
+    }
+}
+
+.l-section-xl {
+    @include rem( 'padding', 64px 8px );
+
+    @include mq( $until: sm ) {
+        @include rem( 'padding-top', 16px );
+        @include rem( 'padding-bottom', 16px );
+    }
+}
+
+.l-section-xxl {
+    @include rem( 'padding', 96px 8px );
+
+    @include mq( $until: sm ) {
+        @include rem( 'padding-top', 16px );
+        @include rem( 'padding-bottom', 16px );
+    }
+}
+
+.l-section-xxxl {
+    @include rem( 'padding', 128px 8px );
+
+    @include mq( $until: sm ) {
+        @include rem( 'padding-top', 16px );
+        @include rem( 'padding-bottom', 16px );
     }
 }
 
