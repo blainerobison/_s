@@ -75,6 +75,7 @@ a {
     color: $link-color;
     @include transition-property( color, background, border );
     @include transition-duration( .15s );
+
     &:hover {
         color: $link-color-hover;
     }
