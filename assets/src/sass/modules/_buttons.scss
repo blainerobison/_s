@@ -32,26 +32,26 @@ input[type="submit"] {
     @extend %btn;
 
     &:hover {
-        background-color: $off-black;
+        background-color: $tundora;
         color: white;
     }
 }
 
 .btn--primary {
-    background-color: $pomegranate;
+    background-color: $carnation;
     color: white;
 
     &:hover {
-        background-color: darken( $pomegranate, 10% );
+        background-color: darken( $carnation, 10% );
     }
 }
 
 .btn--secondary {
-    background-color: $endeavour;
+    background-color: $azure;
     color: white;
 
     &:hover {
-        background-color: darken( $endeavour, 10% );
+        background-color: darken( $azure, 10% );
     }
 }
 
@@ -188,31 +188,31 @@ input[type="submit"] {
    ========================================================================== */
 
 .btn--success {
-    background-color: $success;
+    background-color: $alert-success;
     color: white;
 
     &:hover {
-        background-color: darken( $success, 10% );
+        background-color: darken( $alert-success, 10% );
         color: white;
     }
 }
 
 .btn--warning {
-    background-color: $warning;
+    background-color: $alert-warning;
     color: white;
 
     &:hover {
-        background-color: darken( $warning, 10% );
+        background-color: darken( $alert-warning, 10% );
         color: white;
     }
 }
 
 .btn--error {
-    background-color: $error;
+    background-color: $alert-error;
     color: white;
 
     &:hover {
-        background-color: darken( $error, 10% );
+        background-color: darken( $alert-error, 10% );
         color: white;
     }
 }
@@ -229,11 +229,11 @@ input[type="submit"] {
 .btn--disabled:hover,
 .btn--disabled:focus,
 .btn--disabled:active {
-    background-color: $alto;
+    background-color: $geyser;
     background-image: none;
     box-shadow: none;
     border: 0;
     opacity: .4;
     cursor: not-allowed;
-    color: $gray;
+    color: $waterloo;
 }

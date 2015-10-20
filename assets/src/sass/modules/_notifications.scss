@@ -6,23 +6,23 @@
 .notification {
     padding: 1em;
     position: relative;
-    background-color: $off-white;
+    background-color: $haze;
     @include transition( background .15s );
 }
 
 .notification--error {
-    background-color: $error-lt;
-    color: $error;
+    background-color: $alert-error-lt;
+    color: $alert-error;
 }
 
 .notification--warning {
-    background-color: $warning-lt;
-    color: $warning;
+    background-color: $alert-warning-lt;
+    color: $alert-warning;
 }
 
 .notification--success {
-    background-color: $success-lt;
-    color: $success;
+    background-color: $alert-success-lt;
+    color: $alert-success;
 }
 
 .notification__message {
@@ -31,15 +31,15 @@
         text-decoration: underline;
 
         .notification--error & {
-            color: $error;
+            color: $alert-error;
         }
 
         .notification--warning & {
-            color: $warning;
+            color: $alert-warning;
         }
 
         .notification--success & {
-            color: $success;
+            color: $alert-success;
         }
     }
 
@@ -58,14 +58,14 @@
     cursor: pointer;
     background-color: white;
     border-radius: 50%;
-    color: $alto;
+    color: $geyser;
     @include rem( 'font-size', 10px );
     @include transition-property( color, transform );
     @include transition-duration( .15s );
     @include transform( rotate( 0deg ) );
 
     &:hover {
-        color: $error;
+        color: $alert-error;
         @include transform( rotate( 90deg ) );
     }
 }

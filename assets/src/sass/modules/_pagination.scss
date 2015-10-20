@@ -27,19 +27,19 @@
     a {
         padding: .4em .9em;
         display: block;
-        background-color: $mercury;
-        color: darken( $alto, 10% );
+        background-color: $catskill;
+        color: darken( $geyser, 10% );
         @include transition-property( background, color );
         @include transition-duration( .15s );
 
         &:hover {
-            background-color: $success;
+            background-color: $alert-success;
             color: #fff;
         }
     }
 
     .current {
-            color: $success;
+            color: $alert-success;
     }
 
     .dots {
