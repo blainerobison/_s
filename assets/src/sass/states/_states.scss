@@ -21,7 +21,7 @@
 // Completely remove from the flow and screen readers.
 //
 .is-hidden {
-    @extend %hidden;
+    @include hidden;
 }
 
 .is-displayed {
@@ -32,14 +32,14 @@
 // Completely remove from the flow but leave available to screen readers.
 //
 .is-visually-hidden {
-    @extend %visuallyhidden;
+    @include visuallyhidden;
 }
 
 //
 // Control visibility without affecting flow.
 //
 .is-invisible {
-    @extend %invisible;
+    @include invisible;
 }
 
 .is-visible {

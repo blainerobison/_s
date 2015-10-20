@@ -148,3 +148,76 @@ $baseline-px: 16 !default;
 //         #{$property}: $rem-values;
 //     }
 // }
+
+
+
+
+
+
+// ==========================================================================
+// Visibility
+// ==========================================================================
+
+/// Hidden
+///
+/// @link HTML5 Boilerplate - https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css#L118
+@mixin hidden {
+    /*
+     * Hide visually and from screen readers:
+     * http://juicystudio.com/article/screen-readers-display-none.php
+     */
+    display: none !important;
+    visibility: hidden;
+}
+
+
+
+
+
+/// Invisble
+///
+/// @link HTML5 Boilerplate - https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css#L158
+@mixin invisible {
+    /*
+    * Hide visually and from screenreaders, but maintain layout
+    */
+    visibility: hidden;
+}
+
+
+
+
+
+/// Visually Hidden
+///
+/// @link HTML5 Boilerplate - https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css#L126
+@mixin visuallyhidden {
+
+    /*
+     * Hide only visually, but have it available for screen readers:
+     * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+     */
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+
+    /*
+     * Extends the .visuallyhidden class to allow the element to be focusable
+     * when navigated to via the keyboard: h5bp.com/p
+     */
+    &.focusable:active,
+    &.focusable:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }
+
+}
