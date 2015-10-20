@@ -128,8 +128,8 @@
 // Typography
 // ==========================================================================
 
-    $font-family                             : 'Open Sans', sans-serif;
-    $font-family-secondary                   : sans-serif;
+    $font-family                                           : 'Lato', 'Open Sans', sans-serif;
+    $font-family-secondary                                 : $font-family;
     $font-size                                             : 16px;
     $font-color                                            : $tundora;
     $link-color                                            : $azure;
