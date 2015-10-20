@@ -3,62 +3,62 @@
 // Layout
 // ==========================================================================
 
-/* Containers
+/* Constrain
    ========================================================================== */
 
-%l-constrained {
+%l-constrain {
     margin: 0 auto;
     width: 100%;
     max-width: $md;
     @include clearfix;
 }
 
-.l-constrained {
-    @extend %l-constrained;
+.l-constrain {
+    @extend %l-constrain;
 }
 
-.l-constrained--xxxs {
-    @extend %l-constrained;
+.l-constrain-xxxs {
+    @extend %l-constrain;
     max-width: $xxxs; // 320
 }
 
-.l-constrained--xxs {
-    @extend %l-constrained;
+.l-constrain-xxs {
+    @extend %l-constrain;
     max-width: $xxs; // 480
 }
 
-.l-constrained--xs {
-    @extend %l-constrained;
+.l-constrain-xs {
+    @extend %l-constrain;
     max-width: $xs; // 600
 }
 
-.l-constrained--sm {
-    @extend %l-constrained;
+.l-constrain-sm {
+    @extend %l-constrain;
     max-width: $sm; // 768
 }
 
-.l-constrained--md {
-    @extend %l-constrained;
+.l-constrain-md {
+    @extend %l-constrain;
     max-width: $md; // 960
 }
 
-.l-constrained--lg {
-    @extend %l-constrained;
+.l-constrain-lg {
+    @extend %l-constrain;
     max-width: $lg; // 1024
 }
 
-.l-constrained--xl {
-    @extend %l-constrained;
+.l-constrain-xl {
+    @extend %l-constrain;
     max-width: $xl; // 1200
 }
 
-.l-constrained--xxl {
-    @extend %l-constrained;
+.l-constrain-xxl {
+    @extend %l-constrain;
     max-width: $xxl; // 1280
 }
 
-.l-constrained--xxl {
-    @extend %l-constrained;
+.l-constrain-xxl {
+    @extend %l-constrain;
     max-width: $xxxl; // 1500
 }
 
