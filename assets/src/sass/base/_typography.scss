@@ -130,18 +130,3 @@ dd {
 .subheading {
     color: lighten( $font-color, 30% );
 }
-
-
-
-
-
-/* Formatting
-   ========================================================================== */
-
-.fine-print {
-    @include rem( 'font-size', 12px );
-}
-
-.text-accent {
-    @include rem( 'font-size', 22px );
-}

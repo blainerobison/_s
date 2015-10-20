@@ -138,6 +138,34 @@
     text-transform: uppercase;
 }
 
+.text-xxs {
+    @include rem( 'font-size', 12px );
+}
+
+.text-xs {
+    @include rem( 'font-size', 16px );
+}
+
+.text-sm {
+    @include rem( 'font-size', 18px );
+}
+
+.text-md {
+    @include rem( 'font-size', 22px );
+}
+
+.text-lg {
+    @include rem( 'font-size', 29px );
+}
+
+.text-xl {
+    @include rem( 'font-size', 45px );
+}
+
+.text-xxl {
+    @include rem( 'font-size', 63px );
+}
+
 
 
 
