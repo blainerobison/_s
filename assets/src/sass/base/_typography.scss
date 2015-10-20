@@ -82,9 +82,10 @@ a {
 
 blockquote {
     margin: 0;
-    padding: 0 0 0 30px;
-    border-left: 3px solid $geyser;
+    padding: 0;
+    font-weight: 300;
     font-style: italic;
+    @include rem( 'font-size', 32px );
 }
 
 dt {
