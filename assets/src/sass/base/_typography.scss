@@ -89,12 +89,12 @@ blockquote {
 }
 
 dt {
-    margin-bottom: .3em;
     font-weight: bold;
+    @include rem( 'margin-bottom', 4px );
 }
 
 dd {
-    margin: 0 0 .75em 0;
+    @include rem( 'margin', 0 0 12px );
 }
 
 
