@@ -119,11 +119,15 @@ dd {
     margin: 0;
 }
 
-.heading--snug {
+.heading--snug-top {
     margin-top: 0;
 }
 
-.heading--light {
+.heading--snug-bottom {
+    margin-bottom: 0;
+}
+
+.heading--inverse {
     color: white;
 }
 
