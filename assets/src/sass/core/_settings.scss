@@ -21,12 +21,7 @@
 // ==========================================================================
 
     // Sass-mq Configuration
-    //
-    // Reference: https://github.com/sass-mq/sass-mq#adding-custom-breakpoints
-    //
-    // Name your breakpoints in a way that creates a ubiquitous language
-    // across team members. It will improve communication between
-    // stakeholders, designers, developers, and testers.
+    // Reference: https://github.com/sass-mq/sass-mq
     $mq-breakpoints: (
         xxxs                                               : $xxxs,
         xxs                                                : $xxs,
