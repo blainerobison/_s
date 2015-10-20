@@ -41,7 +41,7 @@
 /// @link https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
 /// @link (old) http://kenneth.io/blog/2012/03/04/word-wrapping-hypernation-using-css/
 
-@mixin overflow-wrap() {
+@mixin overflow-wrap {
 
     /* Non standard for webkit */
     word-break: break-word;
