@@ -3,6 +3,10 @@
 // Project Imports
 // ==========================================================================
 
+
+
+
+
 // Sass-mq
 //
 // Support for browsers that do not support @media queries,
@@ -14,13 +18,9 @@
 $mq-responsive: false;
 $mq-static-breakpoint: site;
 
-// ==========================================================================
-// Settings
-// ==========================================================================
 
-@import "core/settings",
-        "core/functions",
-        "core/mixins";
+
+
 
 // ==========================================================================
 // Dependencies
@@ -29,6 +29,14 @@ $mq-static-breakpoint: site;
 @import "../../../bower_components/bourbon/app/assets/stylesheets/bourbon",
         "../../../bower_components/sass-mq/mq",
         "../../../bower_components/susy/sass/susy";
+
+// ==========================================================================
+// Settings
+// ==========================================================================
+
+@import "core/functions",
+        "core/mixins",
+        "core/settings";
 
 // ==========================================================================
 // Base
