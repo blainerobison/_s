@@ -3,16 +3,32 @@
 // Functions
 // ==========================================================================
 
-// Output Map value
-//
-// The idea is to use bp( tablet ) instead of $tablet. The added benefit is not
-// having to double manage breakpoints between variables and $mq-breakpoint map.
-// [libsass] treats 'not' as a function, or constant if not parenthesized - 1/16/15
-// reference: https://github.com/sass/libsass/pull/680
-// reference: https://github.com/sass/libsass/pull/355
-@function bp( $bp: 'tablet' ) {
-    @if not( map-has-key( $mq-breakpoints, $bp ) ) {
-        @warn "Key `#{$bp}` not found.";
+
+
+
+
+/// Get a breakpoint's width
+///
+/// @param {String} $name - Name of the breakpoint. One of $mq-breakpoints
+///
+/// @example scss
+///      $tablet-width: mq-get-breakpoint-width(tablet);
+///      @media (min-width: mq-get-breakpoint-width(desktop)) {}
+///
+/// @requires {Variable} $mq-breakpoints
+///
+/// @returns {Number} Value in pixels
+@function bp( $name, $breakpoints: $mq-breakpoints ) {
+
+    @if map-has-key( $breakpoints, $name ) {
+
+        @return map-get( $breakpoints, $name );
+
     }
-    @return map-get( $mq-breakpoints, $bp );
+
+    @warn "Breakpoint #{$name} wasn't found in $breakpoints.";
+
+    @return null;
+
+}
 }

@@ -9,7 +9,7 @@
 %l-constrain {
     margin: 0 auto;
     width: 100%;
-    max-width: $md;
+    max-width: bp( md );
     @include clearfix;
 }
 
@@ -19,47 +19,47 @@
 
 .l-constrain-xxxs {
     @extend %l-constrain;
-    max-width: $xxxs; // 320
+    max-width: bp( xxxs ); // 320
 }
 
 .l-constrain-xxs {
     @extend %l-constrain;
-    max-width: $xxs; // 480
+    max-width: bp( xxs ); // 480
 }
 
 .l-constrain-xs {
     @extend %l-constrain;
-    max-width: $xs; // 600
+    max-width: bp( xs ); // 600
 }
 
 .l-constrain-sm {
     @extend %l-constrain;
-    max-width: $sm; // 768
+    max-width: bp( sm ); // 768
 }
 
 .l-constrain-md {
     @extend %l-constrain;
-    max-width: $md; // 960
+    max-width: bp( md ); // 960
 }
 
 .l-constrain-lg {
     @extend %l-constrain;
-    max-width: $lg; // 1024
+    max-width: bp( lg ); // 1024
 }
 
 .l-constrain-xl {
     @extend %l-constrain;
-    max-width: $xl; // 1200
+    max-width: bp( xl ); // 1200
 }
 
 .l-constrain-xxl {
     @extend %l-constrain;
-    max-width: $xxl; // 1280
+    max-width: bp( xxl ); // 1280
 }
 
-.l-constrain-xxl {
+.l-constrain-xxxl {
     @extend %l-constrain;
-    max-width: $xxxl; // 1500
+    max-width: bp( xxxl ); // 1500
 }
 
 

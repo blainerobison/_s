@@ -3,38 +3,37 @@
 // Breakpoints
 // ==========================================================================
 
-    $xxxs                                                  : 320px; // mobile
-    $xxs                                                   : 480px; // mobile-landscape
-    $xs                                                    : 600px; // mobile-wide
-    $sm                                                    : 768px; // tablet
-    $md                                                    : 960px; // site
-    $lg                                                    : 1024px; // tablet-landscape
-    $xl                                                    : 1200px; // site-constraint
-    $xxl                                                   : 1280px; // desktop
-    $xxxl                                                  : 1500px; // desktop-wide
+    $breakpoints: (
+        xxxs                                                  : 320px, // mobile
+        xxs                                                   : 480px, // mobile-landscape
+        xs                                                    : 600px, // mobile-wide
+        sm                                                    : 768px, // tablet
+        md                                                    : 960px, // site
+        lg                                                    : 1024px, // tablet-landscape
+        xl                                                    : 1200px, // site-constraint
+        xxl                                                   : 1280px, // desktop
+        xxxl                                                  : 1500px // desktop-wide
 
-    // Project Specific
-    // These should also be added to $mq-breakpoints map.
+        // Project Specific
+        // These should also be added to $mq-breakpoints map.
+    );
 
 // ==========================================================================
 // Media Queries
 // ==========================================================================
 
-    // Sass-mq Configuration
-    // Reference: https://github.com/sass-mq/sass-mq
-    $mq-breakpoints: (
-        xxxs                                               : $xxxs,
-        xxs                                                : $xxs,
-        xs                                                 : $xs,
-        sm                                                 : $sm,
-        md                                                 : $md,
-        lg                                                 : $lg,
-        xl                                                 : $xl,
-        xxl                                                : $xxl,
-        xxxl                                               : $xxxl
+    // Sass MQ - https://github.com/sass-mq/sass-mq
 
-        // Project Specific
+    // remove existing map values from $mq-breakpoints
+    $mq-breakpoints: map-remove( $mq-breakpoints,
+        'mobile',
+        'tablet',
+        'desktop',
+        'wide'
     );
+
+    // breakpoints
+    $mq-breakpoints: map-merge( $mq-breakpoints, $breakpoints );
 
     // Define the breakpoint from the $mq-breakpoints list that should
     // be used as the target width when outputting a static stylesheet
