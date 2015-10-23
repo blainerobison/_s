@@ -52,7 +52,8 @@ $mq-static-breakpoint: site;
 // Layout
 // ==========================================================================
 
-@import "layout/layout",
+@import "layout/grid",
+        "layout/layout",
         "layout/spacing";
 
 // ==========================================================================
