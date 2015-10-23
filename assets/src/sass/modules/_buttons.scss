@@ -32,26 +32,26 @@ input[type="submit"] {
     @extend %btn;
 
     &:hover {
-        background-color: $tundora;
+        background-color: color( tundora );
         color: white;
     }
 }
 
 .btn--primary {
-    background-color: $carnation;
+    background-color: color( carnation );
     color: white;
 
     &:hover {
-        background-color: darken( $carnation, 10% );
+        background-color: darken( color( carnation ), 10% );
     }
 }
 
 .btn--secondary {
-    background-color: $azure;
+    background-color: color( azure );
     color: white;
 
     &:hover {
-        background-color: darken( $azure, 10% );
+        background-color: darken( color( azure ), 10% );
     }
 }
 
@@ -229,11 +229,11 @@ input[type="submit"] {
 .btn--disabled:hover,
 .btn--disabled:focus,
 .btn--disabled:active {
-    background-color: $geyser;
+    background-color: color( geyser );
     background-image: none;
     box-shadow: none;
     border: 0;
     opacity: .4;
     cursor: not-allowed;
-    color: $waterloo;
+    color: color( waterloo );
 }

@@ -31,4 +31,29 @@
     @return null;
 
 }
+
+
+
+
+
+/// Get Color Value
+///
+/// @param {String} $key - Name of color from value within $palette
+///
+/// @example scss
+///     background-color: color( tundora );
+///
+/// @requires {Variable} $palette
+///
+/// @returns {String} hex color value
+@function color( $key ) {
+
+    @if map-has-key( $palette, $key ) {
+        @return map-get( $palette, $key );
+    }
+
+    @warn "Unknown `#{$key}` in $palette.";
+
+    @return null;
+
 }

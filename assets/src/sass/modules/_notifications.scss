@@ -6,7 +6,7 @@
 .notification {
     padding: 1em;
     position: relative;
-    background-color: $haze;
+    background-color: color( haze );
     @include transition( background .15s );
 }
 
@@ -58,7 +58,7 @@
     cursor: pointer;
     background-color: white;
     border-radius: 50%;
-    color: $geyser;
+    color: color( geyser );
     @include rem( 'font-size', 10px );
     @include transition-property( color, transform );
     @include transition-duration( .15s );

@@ -12,10 +12,10 @@
     table {
         margin-bottom: 1em;
         width: 100%;
-        border: 1px solid $catskill;
+        border: 1px solid color( catskill );
 
         & thead, & tfoot, th {
-            background-color: darken( $haze, 1% );
+            background-color: darken( color( haze ), 1% );
             font-weight: bold;
         }
 
@@ -25,7 +25,7 @@
         }
 
         & tr:nth-of-type( even ) {
-            background-color: lighten( $haze, 1% );
+            background-color: lighten( color( haze ), 1% );
         }
     }
 }

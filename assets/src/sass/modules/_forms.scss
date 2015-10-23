@@ -7,19 +7,19 @@
    ========================================================================== */
 
 ::-webkit-input-placeholder {
-   color: $geyser;
+   color: color( geyser );
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: $geyser;
+   color: color( geyser );
 }
 
 ::-moz-placeholder { /* Firefox 19+ */
-   color: $geyser;
+   color: color( geyser );
 }
 
 :-ms-input-placeholder {
-   color: $geyser;
+   color: color( geyser );
 }
 
 /**
@@ -32,7 +32,7 @@ textarea {
     width: 100%;
     display: inline-block;
     background-color: white;
-    border: 1px solid $geyser;
+    border: 1px solid color( geyser );
     border-radius: 4px;
     @include rem( 'margin', 0 0 16px );
     @include rem( 'padding', 7px );
@@ -43,7 +43,7 @@ textarea {
 input:focus,
 textarea:focus,
 select:focus {
-    border-color: $waterloo;
+    border-color: color( waterloo );
     outline: none;
 }
 

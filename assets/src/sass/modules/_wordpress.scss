@@ -57,7 +57,7 @@
 .wp-caption {
     padding: 0.5em;
     max-width: 100%;
-    border: 1px solid $haze;
+    border: 1px solid color( haze );
     text-align: center;
     @include rem( 'margin', 0 0 18px 0 );
 

@@ -12,7 +12,7 @@
         margin: 1em 0;
         padding: .5em;
         position: relative;
-        background-color: $catskill;
+        background-color: color( catskill );
 
         footer {
             margin-bottom: .5em;
@@ -35,7 +35,7 @@
 
         > a {
             @include rem( 'font-size', 12px );
-            color: darken( $catskill, 20% );
+            color: darken( color( catskill ), 20% );
         }
 
         time {
@@ -58,7 +58,7 @@
             padding: 4px;
             display: inline-block;
             background-color: white;
-            border: 1px solid $catskill;
+            border: 1px solid color( catskill );
             @include rem( 'font-size', 12px );
 
             &:hover {
@@ -83,7 +83,7 @@
 
             &:hover {
                 background-color: white;
-                border: 1px solid $catskill;
+                border: 1px solid color( catskill );
                 color: $alert-success;
             }
         }

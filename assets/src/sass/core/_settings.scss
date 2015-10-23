@@ -65,63 +65,51 @@
 // Colors
 // ==========================================================================
 
-    // Color Names: http://chir.ag/projects/name-that-color/
+    // Color Palette
+    //
+    // @link    color names: http://chir.ag/projects/name-that-color/
+    // @example scss usage: background-color: color( tundora );
+    $palette: (
 
-    // Project Specific
-    // ----------------------------------------------------------------------
+        // Project Specific
+        // ------------------------------------------------------------------
 
 
-    // Global
-    // ----------------------------------------------------------------------
+        // Global
+        // ------------------------------------------------------------------
 
-    $tundora                                               : #494949;
-    $azure                                                 : #0099ff;
-    $carnation                                             : #f55555;
-    $orange                                                : #ff6633;
-    $carrot                                                : #ff9933;
-    $shamrock                                              : #33cc99;
-    $cornflower                                            : #6666ff;
-    $waterloo                                              : #7f8492;
-    $aluminum                                              : #acb0bb;
-    $ghost                                                 : #c1c7d4;
-    $geyser                                                : #d8dde6;
-    $catskill                                              : #eceff5;
-    $haze                                                  : #f4f6f9;
+        tundora                                           : #494949,
+        azure                                             : #0099ff,
+        carnation                                         : #f55555,
+        orange                                            : #ff6633,
+        carrot                                            : #ff9933,
+        shamrock                                          : #33cc99,
+        cornflower                                        : #6666ff,
+        waterloo                                          : #7f8492,
+        aluminum                                          : #acb0bb,
+        ghost                                             : #c1c7d4,
+        geyser                                            : #d8dde6,
+        catskill                                          : #eceff5,
+        haze                                              : #f4f6f9,
 
-    // Alerts
-    // ----------------------------------------------------------------------
+        // Social Networks
+        // ------------------------------------------------------------------
 
-    $alert-message                                         : $azure;
-    $alert-message-lt                                      : lighten( $azure, 20% );
+        dribbble                                          : #ea4c89,
+        facebook                                          : #3b5998,
+        linkedin                                          : #007fb1,
+        rss                                               : #ff6600,
+        email                                             : #ffdd68,
+        instagram                                         : #3f729b,
+        youtube                                           : #cd332d,
+        vimeo                                             : #44bbff,
+        tumblr                                            : #2c4762,
+        pinterest                                         : #e41f11,
+        googleplus                                        : #d14836,
+        flickr                                            : #0063db,
+        twitter                                           : #39a9e0
 
-    $alert-update                                          : $cornflower;
-    $alert-update-lt                                       : lighten( $cornflower, 20% );
-
-    $alert-success                                         : $shamrock;
-    $alert-success-lt                                      : lighten( $shamrock, 20% );
-
-    $alert-warning                                         : $carrot;
-    $alert-warning-lt                                      : lighten( $carrot, 20% );
-
-    $alert-error                                           : $carnation;
-    $alert-error-lt                                        : lighten( $carnation, 20% );
-
-    // Social Networks
-    // ----------------------------------------------------------------------
-
-    $dribbble                                              : #ea4c89;
-    $facebook                                              : #3b5998;
-    $linkedin                                              : #007fb1;
-    $rss                                                   : #ff6600;
-    $email                                                 : #ffdd68;
-    $instagram                                             : #3f729b;
-    $youtube                                               : #cd332d;
-    $vimeo                                                 : #44bbff;
-    $tumblr                                                : #2c4762;
-    $pinterest                                             : #e41f11;
-    $googleplus                                            : #d14836;
-    $flickr                                                : #0063db;
-    $twitter                                               : #39a9e0;
+    );
 
 // ==========================================================================
 // Typography
@@ -130,11 +118,11 @@
     $font-family                                           : 'Lato', 'Open Sans', sans-serif;
     $font-family-secondary                                 : $font-family;
     $font-size                                             : 16px;
-    $font-color                                            : $tundora;
-    $link-color                                            : $azure;
-    $link-color-hover                                      : $orange;
+    $font-color                                            : color( tundora );
+    $link-color                                            : color( azure );
+    $link-color-hover                                      : color( orange );
 
-    $selection-highlight-background                        : $azure;
+    $selection-highlight-background                        : color( azure );
     $selection-highlight-color                             : white;
 
 // ==========================================================================
@@ -144,19 +132,38 @@
     // Menu
     // ----------------------------------------------------------------------
 
-    $offcanvas-background-color                            : $tundora;
+    $offcanvas-background-color                            : color( tundora );
     $offcanvas-link-color                                  : white;
-    $offcanvas-link-color-hover                            : $orange;
-    $offcanvas-link-background-color-hover                 : darken( $tundora, 2% );
-    $offcanvas-link-border-color                           : lighten( $tundora, 6% );
+    $offcanvas-link-color-hover                            : color( orange );
+    $offcanvas-link-background-color-hover                 : darken( color( tundora ), 2% );
+    $offcanvas-link-border-color                           : lighten( color( tundora ), 6% );
 
     // Toggle
     // ----------------------------------------------------------------------
 
-    $menu-toggle-background-color                          : $orange;
+    $menu-toggle-background-color                          : color( orange );
     $menu-toggle-background-color-hover                    : white;
-    $menu-toggle-border-color                              : $orange;
-    $menu-toggle-border-color-hover                        : $orange;
+    $menu-toggle-border-color                              : color( orange );
+    $menu-toggle-border-color-hover                        : color( orange );
     $menu-toggle-line-color                                : white;
-    $menu-toggle-line-color-hover                          : $orange;
-    $menu-toggle-line-color-active                         : $orange;
+    $menu-toggle-line-color-hover                          : color( orange );
+    $menu-toggle-line-color-active                         : color( orange );
+
+// ==========================================================================
+// Alerts
+// ==========================================================================
+
+    $alert-message                                     : color( azure );
+    $alert-message-lt                                  : lighten( color( azure ), 20% );
+
+    $alert-update                                      : color( cornflower );
+    $alert-update-lt                                   : lighten( color( cornflower ), 20% );
+
+    $alert-success                                     : color( shamrock );
+    $alert-success-lt                                  : lighten( color( shamrock ), 20% );
+
+    $alert-warning                                     : color( carrot );
+    $alert-warning-lt                                  : lighten( color( carrot ), 20% );
+
+    $alert-error                                       : color( carnation );
+    $alert-error-lt                                    : lighten( color( carnation ), 20% );

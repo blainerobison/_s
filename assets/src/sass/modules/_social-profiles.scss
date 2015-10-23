@@ -28,15 +28,15 @@
     display: inline-block;
     text-align: center;
     color: white;
-    background-color: $tundora;
+    background-color: color( tundora );
     overflow: hidden;
-    box-shadow: 0 0 0 3px $tundora;
+    box-shadow: 0 0 0 3px color( tundora );
     @include transition-property( color background box-shadow );
     @include transition-duration( .15s );
 
     &:hover {
-        background-color: rgba( $geyser, 1 );
-        color: $carnation;
-        box-shadow: 0 0 0 6px rgba( $geyser, .3 );
+        background-color: rgba( color( geyser ), 1 );
+        color: color( carnation );
+        box-shadow: 0 0 0 6px rgba( color( geyser ), .3 );
     }
 }
