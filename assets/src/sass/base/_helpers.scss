@@ -120,6 +120,35 @@
     @include rem( 'font-size', 63px );
 }
 
+/**
+ * Text Colors
+ *
+ * @example output: .text-tundora { color: #494949 }
+ */
+@each $key, $value in $palette {
+    .text-#{$key} {
+        color: $value;
+    }
+}
+
+
+
+
+
+/* Background
+   ========================================================================== */
+
+/**
+ * Background Colors
+ *
+ * @example output: .bg-tundora { background-color: #494949 }
+ */
+@each $key, $value in $palette {
+    .bg-#{$key} {
+        background-color: $value;
+    }
+}
+
 
 
 
