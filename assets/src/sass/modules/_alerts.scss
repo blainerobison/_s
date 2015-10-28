@@ -1,0 +1,82 @@
+
+// ==========================================================================
+// Alerts
+// ==========================================================================
+
+.alert {
+    padding: $alert-padding;
+    margin-bottom: $spacer-y;
+    border: 1px solid transparent;
+    border-radius: $alert-border-radius;
+    background-color: $alert-info-bg;
+    border-color: $alert-info-border;
+    color: $alert-info-color;
+
+    // Improve alignment and spacing of inner content
+    > p,
+    > ul {
+        margin-bottom: 0;
+    }
+
+    > p + p {
+        margin-top: 4px;
+    }
+
+    > a {
+        font-weight: $alert-link-font-weight;
+    }
+}
+
+.alert--update {
+    background-color: $alert-update-bg;
+    border-color: $alert-update-border;
+    color: $alert-update-color;
+}
+
+.alert--success {
+    background-color: $alert-success-bg;
+    border-color: $alert-success-border;
+    color: $alert-success-color;
+}
+
+.alert--warning {
+    background-color: $alert-warning-bg;
+    border-color: $alert-warning-border;
+    color: $alert-warning-color;
+}
+
+.alert--error {
+    background-color: $alert-error-bg;
+    border-color: $alert-error-border;
+    color: $alert-error-color;
+}
+.alert--dismiss {
+    padding-right: ($alert-padding + 20);
+}
+
+.alert__close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    float: right;
+    font-weight: 700;
+    line-height: 1;
+    background: 0 0;
+    border: 0;
+    text-shadow: 0 1px 0 white;
+    color: black;
+    opacity: .2;
+    cursor: pointer;
+    -webkit-appearance: none;
+
+    @include rem( 'font-size', 24px );
+    @include transition-property( color, transform );
+    @include transition-duration( .15s );
+    @include transform( rotate( 0deg ) );
+
+    &:hover {
+        opacity: 1;
+        color: $state-error;
+        @include transform( rotate( 90deg ) );
+    }
+}

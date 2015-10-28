@@ -6,6 +6,8 @@
         var EV = {
             init : function() {
                 this.utils.init();
+                this.alerts();
+                this.patternLibrary();
             },
             vals : {
                 $window : $(window) // http://jsperf.com/jquery-window-cache
@@ -89,6 +91,27 @@
                     });
                 }
             },
+
+            alerts : function() {
+
+                $('.js-close').on( 'click', function( e ) {
+
+                    $(this).closest('.alert').slideUp();
+
+                    e.preventDefault();
+                });
+
+            },
+
+            patternLibrary : function() {
+
+                $('.js-pl-source-toggle').on( 'click', function( e ) {
+
+                    $(this).closest('.pl-source').find('.pl-source__code').slideToggle();
+                    // $('.pl-source__code').slideToggle();
+                    e.preventDefault();
+                });
+            }
         };
 
         EV.init();

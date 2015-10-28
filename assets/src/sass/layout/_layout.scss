@@ -159,6 +159,23 @@
 /* Layouts
    ========================================================================== */
 
+.l-main {
+    @include mq( $until: sm ) {
+        padding-bottom: 2em;
+    }
+    @include mq( $from: sm ) {
+        padding-right: 1.5em;
+        @include span( 8 no-gutters );
+    }
+}
+
+.l-aside {
+    @include mq( $from: sm ) {
+        padding-left: 1.5em;
+        @include span( 4 no-gutters );
+    }
+}
+
 .l-primary {
     @include mq( $until: sm ) {
         padding-bottom: 2em;

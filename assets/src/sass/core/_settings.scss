@@ -126,6 +126,87 @@
     $selection-highlight-color                             : white;
 
 // ==========================================================================
+// Global Components
+// ==========================================================================
+
+    // Border Radius
+    // ----------------------------------------------------------------------
+
+    $border-radius                                         : 4px !default;
+    $border-radius-sm                                      : 2px !default;
+    $border-radius-lg                                      : 500px !default;
+
+    // Spacing
+    // ----------------------------------------------------------------------
+
+    $spacer                                                : 20px !default;
+    $spacer-x                                              : $spacer !default;
+    $spacer-y                                              : $spacer !default;
+
+    // Color States
+    // ----------------------------------------------------------------------
+
+    $state-info                                            : color( azure );
+    $state-info-lt                                         : lighten( color( azure ), 45% );
+
+    $state-update                                          : color( cornflower );
+    $state-update-lt                                       : lighten( color( cornflower ), 26% );
+
+    $state-success                                         : color( shamrock );
+    $state-success-lt                                      : lighten( color( shamrock ), 43% );
+
+    $state-warning                                         : color( carrot );
+    $state-warning-lt                                      : lighten( color( carrot ), 35% );
+
+    $state-error                                           : color( carnation );
+    $state-error-lt                                        : lighten( color( carnation ), 32% );
+
+// ==========================================================================
+// Tables
+// ==========================================================================
+
+    $table-cell-padding                                    : 12px !default;
+    $table-sm-cell-padding                                 : 4px !default;
+    $table-bg                                              : transparent !default;
+    $table-bg-accent                                       : color( haze ) !default;
+    $table-border-color                                    : color( geyser ) !default;
+    $table-bg-hover                                        : $table-bg-accent;
+
+// ==========================================================================
+// Buttons
+// ==========================================================================
+
+    $btn-padding-x                                         : 8px !default;
+    $btn-padding-y                                         : 16px !default;
+    $btn-text-transform                                    : none !default;
+
+    $btn-primary-color                                     : white !default;
+    $btn-primary-color-hover                               : white !default;
+    $btn-primary-bg                                        : color( azure ) !default;
+    $btn-primary-border                                    : color( azure ) !default;
+
+    $btn-secondary-color                                   : white !default;
+    $btn-secondary-color-hover                             : white !default;
+    $btn-secondary-bg                                      : color( waterloo ) !default;
+    $btn-secondary-border                                  : color( waterloo ) !default;
+
+    $btn-tertiary-color                                    : $font-color !default;
+    $btn-tertiary-color-hover                              : $font-color !default;
+    $btn-tertiary-bg                                       : color( catskill ) !default;
+    $btn-tertiary-border                                   : color( ghost ) !default;
+
+    $btn-outline-color                                     : $btn-primary-bg !default;
+    $btn-outline-color-hover                               : white !default;
+    $btn-outline-bg                                        : transparent !default;
+    $btn-outline-bg-hover                                  : $btn-primary-bg !default;
+    $btn-outline-border                                    : $btn-primary-bg !default;
+
+    // Allows for customizing button radius independently from global border radius
+    $btn-border-radius                                     :$border-radius;
+    $btn-border-radius-sm                                  :$border-radius-sm;
+    $btn-border-radius-lg                                  :$border-radius-lg;
+
+// ==========================================================================
 // Offcanvas
 // ==========================================================================
 
@@ -149,21 +230,31 @@
     $menu-toggle-line-color-hover                          : color( orange );
     $menu-toggle-line-color-active                         : color( orange );
 
+
 // ==========================================================================
 // Alerts
 // ==========================================================================
 
-    $alert-message                                     : color( azure );
-    $alert-message-lt                                  : lighten( color( azure ), 20% );
+    $alert-padding                                         : 16px !default;
+    $alert-border-radius                                   : $border-radius !default;
+    $alert-link-font-weight                                : 700 !default;
 
-    $alert-update                                      : color( cornflower );
-    $alert-update-lt                                   : lighten( color( cornflower ), 20% );
+    $alert-info-bg                                         : $state-info-lt !default;
+    $alert-info-color                                      : $state-info !default;
+    $alert-info-border                                     : $state-info-lt !default;
 
-    $alert-success                                     : color( shamrock );
-    $alert-success-lt                                  : lighten( color( shamrock ), 20% );
+    $alert-update-bg                                       : $state-update-lt !default;
+    $alert-update-color                                    : $state-update !default;
+    $alert-update-border                                   : $state-update-lt !default;
 
-    $alert-warning                                     : color( carrot );
-    $alert-warning-lt                                  : lighten( color( carrot ), 20% );
+    $alert-success-bg                                      : $state-success-lt !default;
+    $alert-success-color                                   : $state-success !default;
+    $alert-success-border                                  : $state-success-lt !default;
 
-    $alert-error                                       : color( carnation );
-    $alert-error-lt                                    : lighten( color( carnation ), 20% );
+    $alert-warning-bg                                      : $state-warning-lt !default;
+    $alert-warning-color                                   : $state-warning !default;
+    $alert-warning-border                                  : $state-warning-lt !default;
+
+    $alert-error-bg                                        : $state-error-lt !default;
+    $alert-error-color                                     : $state-error !default;
+    $alert-error-border                                    : $state-error-lt !default;

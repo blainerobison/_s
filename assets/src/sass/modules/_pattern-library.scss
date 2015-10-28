@@ -1,0 +1,308 @@
+// ==========================================================================
+// Pattern Library
+// ==========================================================================
+
+// Styles specific to pattern library componenets.
+
+/* Hero
+   ========================================================================== */
+
+.pl-hero {
+    background-color: color( azure );
+    @include rem( 'padding', 16px );
+}
+
+/**
+ * 1. 'height' is needed for IE10 - 11
+ *     @link: https://github.com/philipwalton/solved-by-flexbox/blob/master/assets/css/components/aligner.css
+ * 2. Flexbox support (vertical align)
+ * 3. No flexbox support
+ */
+.pl-hero__lining {
+    @include mq( $from: sm ) {
+        height: 368px; /* 1 */
+
+        .flexbox & {
+            @include display( flex ); /* 2 */
+            @include align-items( center ); /* 2 */
+        }
+
+        .no-flexbox & {
+            padding-top: 4em; /* 3 */
+        }
+    }
+}
+
+/**
+ * 1. Restore height for non-IE browsers that handle @supports
+ *    @link: http://caniuse.com/#search=%40supports
+ */
+@supports not ( -ms-flex: 1 ) {
+    .pl-hero__lining {
+        @include mq( $from: sm ) {
+            height: auto; /* 1 */
+            min-height: 368px; /* 1 */
+        }
+    }
+}
+
+.pl-hero__column {
+    @include mq( $until: sm ) {
+        text-align: center;
+    }
+
+    @include mq( $from: sm ) {
+        &:first-child {
+            padding-left: 200px;
+        }
+
+        & + & {
+            text-align: center;
+        }
+    }
+}
+
+.pl-hero__heading {
+    margin: 0;
+    text-transform: none;
+    color: white;
+    @include rem( 'font-size', 63px );
+}
+
+.pl-hero__subheading {
+    color: white;
+    font-style: italic;
+    font-weight: 700;
+    @include rem( 'font-size', 22px );
+}
+
+
+
+
+
+/* Version
+   ========================================================================== */
+
+.pl-version {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    display: inline-block;
+    border: 1px solid rgba( white, .6 );
+    border-radius: 500px;
+    text-align: center;
+    color: white;
+    @include rem( 'font-size', 29px );
+}
+
+
+
+
+
+/* Section Heading
+   ========================================================================== */
+
+.pl-heading {
+    line-height: 1;
+    position: relative;
+    border-left: 4px solid color( orange );
+    @include rem( 'margin-bottom', 72px );
+    @include rem( 'padding-left', 16px );
+    @include rem( 'font-size', 29px );
+
+    &:after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        display: block;
+        position: absolute;
+        bottom: -48px;
+        left: 0;
+        background-color: color( ghost );
+    }
+}
+
+.pl-heading__order {
+    display: block;
+    color: color( geyser );
+    @include rem( 'margin-bottom', 16px );
+}
+
+
+
+
+
+/* Color Palette
+   ========================================================================== */
+
+$palette-size: 136px;
+
+.pl-palette {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.pl-palette__item {
+    width: $palette-size;
+    height: $palette-size;
+    display: inline-block;
+    vertical-align: top;
+    @include rem( 'padding', 12px );
+}
+
+.pl-swatch {
+    width: 100%;
+    height: 100%;
+    line-height: $palette-size - ( 12 * 2 );
+    background-color: color( tundora );
+    border-radius: 32px;
+    text-align: center;
+    color: white;
+}
+
+/**
+ * Loop through color palette.
+ *
+ * Assign background color to each swatch and use a dark font
+ * when background color is light.
+ */
+@for $i from 1 through length( $palette ) {
+
+    // store temporarily
+    $color: nth( nth( $palette, $i ), 2 );
+
+    .pl-palette__item:nth-child( #{$i} ) {
+
+        .pl-swatch {
+            background-color: $color;
+
+            &:after {
+                @if ( color-lightness( $color, 75) ) {
+                    color: $font-color;
+                }
+                content: "#{ $color }";
+            }
+        }
+    }
+}
+
+
+
+
+
+/* Typefaces
+   ========================================================================== */
+
+.pl-typefaces {}
+
+.pl-typefaces__name {
+    line-height: 1;
+    text-transform: none;
+    @include rem( 'font-size', 63px );
+}
+
+/**
+ * 1. Magic numbering around to shrink dat line-heights, yo
+ */
+.pl-typefaces__example {
+    line-height: 150px; /* 1 */
+    overflow: hidden;
+    font-weight: 300;
+    color: color( carrot );
+    @include rem( 'font-size', 180px );
+}
+
+
+
+
+
+/* Weights
+   ========================================================================== */
+
+.pl-weights {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    @include clearfix;
+}
+
+.pl-weights__item {
+    width: 50%;
+    display: block;
+    float: left;
+}
+
+.pl-weights__item--light {
+    font-weight: 300;
+}
+
+.pl-weights__item--semibold {
+    font-weight: 700;
+}
+
+.pl-weights__item--italic {
+    font-style: italic;
+}
+
+
+
+
+
+/* Grid
+   ========================================================================== */
+
+.pl-row {
+    background-color: color( geyser );
+    .column,
+    .columns {
+        border: 1px solid white;
+        text-align: center;
+        @include rem( 'line-height', 32px );
+    }
+}
+
+
+
+
+
+/* Source
+   ========================================================================== */
+
+.pl-source {
+    @include rem( 'margin-top', 20px );
+}
+
+.pl-source__driver {
+    line-height: 1;
+    text-align: right;
+    background-color: color( catskill );
+    @include rem( 'padding', 4px 8px );
+
+    a {
+        color: color( tundora );
+
+        &:hover {
+            color: $link-color-hover;
+        }
+    }
+}
+
+.pl-source__toggle {
+    font-weight: 700;
+}
+
+.pl-source__code {
+    display: none;
+}
+
+
+
+
+
+/* Pipe
+   ========================================================================== */
+
+.pl-pipe {
+    color: color( ghost );
+}

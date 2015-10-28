@@ -111,6 +111,21 @@ module.exports = function ( grunt ) {
 
         // Copy Files/Folders
         copy: {
+            prismCSS: {
+                expand: true,
+                cwd: 'bower_components/prism/themes',
+                src: [
+                        'prism-okaidia.css',
+                        'prism.css'
+                    ],
+                dest: '<%= config.dist %>/css/plugins/',
+            },
+            prismJS: {
+                expand: true,
+                cwd: 'bower_components/prism/',
+                src: 'prism.js',
+                dest: '<%= config.dist %>/js/plugins/',
+            },
             js: {
                 expand: true,
                 cwd: '<%= config.src %>/js/plugins/',
@@ -135,7 +150,8 @@ module.exports = function ( grunt ) {
                     '<%= config.dist %>/css/*.css',
                     '<%= config.dist %>/js/**/*.js',
                     '<%= config.dist %>/img/',
-                    '**/*.php'
+                    '**/*.php',
+                    '**/*.html',
                 ],
             },
             options: {
@@ -196,7 +212,7 @@ module.exports = function ( grunt ) {
         'csscomb',
         'concat',
         'uglify',
-        'newer:copy:js',
+        'newer:copy',
         'newer:imagemin',
         'browserSync',
         'watch', // add after 'browserSync'. Not needed for Livereload
@@ -209,7 +225,7 @@ module.exports = function ( grunt ) {
         'csscomb',
         'concat',
         'uglify',
-        'newer:copy:js',
+        'newer:copy',
         'newer:imagemin',
     ]);
 

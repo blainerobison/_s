@@ -62,7 +62,7 @@
             @include rem( 'font-size', 12px );
 
             &:hover {
-                background-color: $alert-success;
+                background-color: $state-success;
                 color: white;
             }
         }
@@ -76,7 +76,7 @@
         > a {
             padding: 4px;
             display: inline-block;
-            background-color: $alert-success;
+            background-color: $state-success;
             border: 1px solid white;
             color: white;
             @include rem( 'font-size', 12px );
@@ -84,14 +84,14 @@
             &:hover {
                 background-color: white;
                 border: 1px solid color( catskill );
-                color: $alert-success;
+                color: $state-success;
             }
         }
     }
 
     .comment-awaiting-moderation {
         margin-top: 0;
-        background-color: $alert-success;
+        background-color: $state-success;
         text-align: center;
         color: white;
     }

@@ -3,76 +3,87 @@
 // Buttons
 // ==========================================================================
 
-%btn {
-    padding: .5em 1em;
+.btn  {
     position: relative;
-    line-height: normal;
+    line-height: 1;
     display: inline-block;
-    background-color: $font-color;
-    border: 0;
+    vertical-align: middle;
+    background-color: $btn-primary-bg;
+    border: 1px solid transparent;
+    border-radius: $btn-border-radius;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: $btn-text-transform;
+    touch-action: manipulation;
     cursor: pointer;
-    color: white;
-    @include rem( 'padding', 8px 16px );
-    @include rem( 'font-size', 16px );
+    color: $btn-primary-color;
+    @include rem( 'padding', $btn-padding-x $btn-padding-y );
+    @include rem( 'font-size', $font-size );
     @include transition-property( color, background, border );
     @include transition-duration( .15s );
-}
-
-
-
-
-
-/* Main
-   ========================================================================== */
-
-.btn,
-input[type="submit"] {
-    @extend %btn;
 
     &:hover {
-        background-color: color( tundora );
-        color: white;
-    }
-}
-
-.btn--primary {
-    background-color: color( carnation );
-    color: white;
-
-    &:hover {
-        background-color: darken( color( carnation ), 10% );
+        background-color: darken( $btn-primary-bg, 8% );
+        color: $btn-primary-color-hover;
     }
 }
 
 .btn--secondary {
-    background-color: color( azure );
-    color: white;
+    background-color: $btn-secondary-bg;
+    color: $btn-secondary-color-hover;
 
     &:hover {
-        background-color: darken( color( azure ), 10% );
+        background-color: darken( $btn-secondary-bg, 8% );
     }
 }
 
 .btn--tertiary {
-    background-color: $font-color;
-    border: 3px solid $font-color;
+    background-color: $btn-tertiary-bg;
+    border-color: $btn-tertiary-border;
+    color: $btn-tertiary-color;
 
     &:hover {
-        background-color: transparent;
-        border: 3px solid $font-color;
-        color: $font-color;
+        background-color: darken( $btn-tertiary-bg, 8% );
+        color: $btn-tertiary-color-hover;
     }
 }
 
 .btn--outline {
     background-color: transparent;
-    border: 3px solid $font-color;
-    color: $font-color;
+    border-color: $btn-outline-border;
+    color: $btn-outline-color;
 
     &:hover {
-        background-color: $font-color;
+        background-color: darken( $btn-outline-bg-hover, 8% );
+        color: $btn-outline-color-hover;
+    }
+}
+
+.btn--success {
+    background-color: $state-success;
+    color: white;
+
+    &:hover {
+        background-color: darken( $state-success, 10% );
+        color: white;
+    }
+}
+
+.btn--warning {
+    background-color: $state-warning;
+    color: white;
+
+    &:hover {
+        background-color: darken( $state-warning, 10% );
+        color: white;
+    }
+}
+
+.btn--error {
+    background-color: $state-error;
+    color: white;
+
+    &:hover {
+        background-color: darken( $state-error, 10% );
         color: white;
     }
 }
@@ -84,47 +95,27 @@ input[type="submit"] {
 /* Sizes
    ========================================================================== */
 
-.btn--xs {
-    font-size: 55%;
-}
-
 .btn--sm {
     font-size: 70%
-}
-
-.btn--md {
-    font-size: 85%;
 }
 
 .btn--lg {
     font-size: 115%;
 }
 
-.btn--xl {
-    font-size: 130%;
-}
 
 
 
 
-
-/* Shapes
+/* Girth [ +_- ]
    ========================================================================== */
 
-.btn--round {
-    border-radius: 3px;
+.btn--girth-sm {
+    @include rem( 'padding', 12px 30px );
 }
 
-.btn--oval {
-    border-radius: 500px;
-}
-
-.btn--pill-right {
-    border-radius: 500px 0 0 500px
-}
-
-.btn--pill-left {
-    border-radius: 0 500px 500px 0;
+.btn--girth-lg {
+    @include rem( 'padding', 20px 50px );
 }
 
 
@@ -134,7 +125,7 @@ input[type="submit"] {
 /* Width
    ========================================================================== */
 
-.btn--wide {
+.btn--full {
     width: 100%;
 }
 
@@ -146,6 +137,22 @@ input[type="submit"] {
     width: 33.33333%;
 }
 
+input[type="submit"],
+input[type="button"],
+button[type="submit"] {
+
+    &.btn--full {
+        width: 100%;
+    }
+
+    &.btn--half {
+        width: 50%;
+    }
+
+    &.btn--third {
+        width: 33.33333%;
+    }
+}
 
 
 
@@ -177,43 +184,6 @@ input[type="submit"] {
 
     [class^="icon-"], [class*=" icon-"] {
         right: 0.75em;
-    }
-}
-
-
-
-
-
-/* Colors
-   ========================================================================== */
-
-.btn--success {
-    background-color: $alert-success;
-    color: white;
-
-    &:hover {
-        background-color: darken( $alert-success, 10% );
-        color: white;
-    }
-}
-
-.btn--warning {
-    background-color: $alert-warning;
-    color: white;
-
-    &:hover {
-        background-color: darken( $alert-warning, 10% );
-        color: white;
-    }
-}
-
-.btn--error {
-    background-color: $alert-error;
-    color: white;
-
-    &:hover {
-        background-color: darken( $alert-error, 10% );
-        color: white;
     }
 }
 

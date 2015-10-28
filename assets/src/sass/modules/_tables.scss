@@ -1,0 +1,111 @@
+// ==========================================================================
+// Tables
+// ==========================================================================
+
+.table {
+        width: 100%;
+        max-width: 100%;
+        @include rem( 'margin-bottom', $spacer );
+
+    th,
+    td {
+        vertical-align: top;
+        border-top: 1px solid $table-border-color;
+        @include rem( 'padding', 12px );
+    }
+
+    th {
+        text-align: left;
+    }
+
+    thead th {
+        vertical-align: bottom;
+        border-bottom: 2px solid $table-border-color;
+    }
+
+    tbody + tbody {
+        border-top: 2px solid $table-border-color;
+    }
+
+    .table {
+        background-color: $table-bg;
+    }
+}
+
+
+/**
+ * Smaller spacing
+ */
+.table--sm {
+    th,
+    td {
+        @include rem( 'padding', $table-sm-cell-padding );
+    }
+}
+
+/**
+ * Bordered
+ *
+ * Add borders all around the table and between all the columns.
+ */
+.table--bordered {
+
+    border: 1px solid $table-border-color;
+
+    th,
+    td {
+        border: 1px solid $table-border-color;
+    }
+
+    thead {
+
+        th,
+        td {
+            border-bottom-width: 2px;
+        }
+    }
+}
+
+/**
+ * Table Row Striping
+ */
+.table--striped {
+
+    tbody tr:nth-of-type( odd ) {
+       background-color: $table-bg-accent;
+    }
+}
+
+/**
+ * Hover effect
+ *
+ * Placed here since it has to come after the potential zebra striping
+ */
+.table--hover {
+
+    tbody tr:hover {
+        background-color: $table-bg-hover;
+    }
+}
+
+
+
+
+
+/* Responsive Table
+   ========================================================================== */
+
+// Wrap your tables in '.table-responsive' and we'll make them mobile friendly
+// by enabling horizontal scrolling.
+
+.table-responsive {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+
+    // Todo: find out if we need this still.
+    //
+    // border: 1px solid $table-border-color;
+    // -ms-overflow-style: -ms-autohiding-scrollbar;
+    // min-height: 0.01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
+}

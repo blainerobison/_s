@@ -225,6 +225,13 @@ function _s_scripts() {
         wp_enqueue_script( 'comment-reply' );
     }
 
+    // Pattern Library
+    if ( is_page_template( 'tpl-patterns.php' ) ) :
+        wp_enqueue_style( 'prism-css', get_template_directory_uri() . '/assets/dist/css/plugins/prism.css' );
+        wp_enqueue_style( 'prism-css-okaidia', get_template_directory_uri() . '/assets/dist/css/plugins/prism-okaidia.css' );
+        wp_enqueue_script( 'prism-js', get_template_directory_uri() . '/assets/dist/js/plugins/prism.js', array(), false, true );
+    endif;
+
 }
 add_action( 'wp_enqueue_scripts', '_s_scripts' );
 

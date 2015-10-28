@@ -33,7 +33,7 @@ textarea {
     display: inline-block;
     background-color: white;
     border: 1px solid color( geyser );
-    border-radius: 4px;
+    border-radius: $border-radius;
     @include rem( 'margin', 0 0 16px );
     @include rem( 'padding', 7px );
     @include rem( 'height', 40px );
@@ -55,11 +55,11 @@ select {
 }
 
 input[type="submit"],
+input[type="button"],
 button[type="submit"] {
     margin: 0;
     height: auto;
     width: auto;
-    border: none;
     outline: none;
     -webkit-appearance: none;
 }

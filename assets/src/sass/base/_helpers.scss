@@ -34,15 +34,23 @@
    ========================================================================== */
 
 .border {
-    margin-bottom: 1em;
-    padding-bottom: 1em;
     border: 1px solid color( geyser );
 }
 
-.border--bottom {
-    border-top: none;
-    border-right: none;
-    border-left: none;
+.border-right {
+    border-right: 1px solid color( geyser );
+}
+
+.border-bottom {
+    border-bottom: 1px solid color( geyser );
+}
+
+.border-left {
+    border-left: 1px solid color( geyser );
+}
+
+.border-top {
+    border-top: 1px solid color( geyser );
 }
 
 

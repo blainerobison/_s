@@ -1,0 +1,117 @@
+
+// ==========================================================================
+// Callout
+// ==========================================================================
+
+.callout {
+    position: relative;
+    background-color: color( tundora );
+    background-position: center top;
+    background-size: cover;
+    text-align: center;
+
+    @include display( flex );
+    @include align-items( center );
+    @include justify-content( center );
+    @include rem( 'padding', 16px );
+
+    @include mq( $from: sm ) {
+        min-height: 368px;
+        @include rem( 'padding', 16px );
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        background-color: rgba( black, .4 );
+    }
+}
+
+/**
+ * Vertically centers content
+ * 1. Keep content above overlay
+ */
+.callout__content {
+    position: relative;
+    z-index: 2;
+}
+
+.callout__heading {
+    text-transform: none;
+    color: white;
+    @include rem( 'margin-bottom', 8px );
+    @include rem( 'font-size', 63px );
+}
+
+.callout__subheading {
+    font-style: italic;
+    color: white;
+    @include rem( 'font-size', 22px );
+    @include rem( 'margin-bottom', 24px );
+
+    @include mq( $from: sm ) {
+        @include rem( 'margin-bottom', 60px );
+    }
+}
+
+.callout__btn {
+
+}
+
+// .callout {
+//     background-color: $shark;
+//     background-position: center top;
+//     background-size: cover;
+//     text-align: center;
+//     @include rem( 'padding', 32px 8px );
+
+//     @include mq( $from: tablet ) {
+//         padding: 6em .5em;
+//     }
+// }
+
+// .callout__heading {
+//     color: white;
+//     font-family: $font-family-tertiary;
+//     @include rem( 'margin', 0 );
+//     @include rem( 'font-size', 40px );
+
+//     @include mq( $from: tablet ) {
+//         @include rem( 'margin', 0 );
+//         @include rem( 'font-size', 72px );
+//     }
+
+//     br {
+//         @include mq( $until: tablet ) {
+//             display: none;
+//         }
+//     }
+// }
+
+// .callout__content {
+//     color: lighten( $gray, 3% );
+//     @include rem( 'margin', 14px 0 0 );
+//     @include mq( $from: tablet ) {
+//         @include rem( 'margin', 26px 0 0 );
+//     }
+
+//     br {
+//         @include mq( $until: tablet ) {
+//             display: none;
+//         }
+//     }
+// }
+
+// .callout__btn {
+
+//     @include rem( 'margin', 24px 0 0 );
+//     @include mq( $from: tablet ) {
+//         @include rem( 'margin', 44px 0 0 );
+//     }
+// }

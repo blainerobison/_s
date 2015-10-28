@@ -33,13 +33,13 @@
         @include transition-duration( .15s );
 
         &:hover {
-            background-color: $alert-success;
+            background-color: $state-success;
             color: #fff;
         }
     }
 
     .current {
-            color: $alert-success;
+            color: $state-success;
     }
 
     .dots {

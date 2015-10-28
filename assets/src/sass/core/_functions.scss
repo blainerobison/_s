@@ -10,6 +10,7 @@
 /// Get a breakpoint's width
 ///
 /// @param {String} $name - Name of the breakpoint. One of $mq-breakpoints
+/// @param {Map}    $breakpoints - Map of breakpoints
 ///
 /// @example scss
 ///      $tablet-width: mq-get-breakpoint-width(tablet);
@@ -55,5 +56,25 @@
     @warn "Unknown `#{$key}` in $palette.";
 
     @return null;
+
+}
+
+
+
+
+
+/// Determine Color Lightness
+///
+/// @param {String}  $color - single color value
+/// @param {Integer} $threshold - point at which color becomes light (0-100)
+///
+/// @returns {Boolean} whether color is light or dark
+@function color-lightness( $color, $threshold: 50 ) {
+
+    @if ( lightness( $color ) > $threshold ) {
+        @return true; // Lighter backgorund, return dark color
+    }
+
+  @return false;
 
 }

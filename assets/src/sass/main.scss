@@ -52,14 +52,17 @@
 // Modules
 // ==========================================================================
 
-@import "modules/modules",
+@import "modules/alerts",
+        "modules/callout",
+        "modules/pattern-library",
+        "modules/modules",
         "modules/comments",
         "modules/buttons",
         "modules/forms",
         "modules/mq-check",
-        "modules/notifications",
         "modules/offcanvas",
         "modules/pagination",
+        "modules/tables",
         "modules/social-profiles",
         "modules/widgets",
         "modules/wordpress";
