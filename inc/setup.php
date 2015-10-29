@@ -309,12 +309,12 @@ add_action( 'pre_get_posts', '_s_modify_main_query', 1 );
 /**
 * Add style dropdown to MCE editor
 */
-function _s__mce_editor_buttons( $buttons ) {
+function _s_mce_editor_buttons( $buttons ) {
 
    array_unshift( $buttons, 'styleselect' );
    return $buttons;
 }
-add_filter( 'mce_buttons_2', '_s__mce_editor_buttons' );
+add_filter( 'mce_buttons_2', '_s_mce_editor_buttons' );
 
 
 
@@ -323,7 +323,7 @@ add_filter( 'mce_buttons_2', '_s__mce_editor_buttons' );
 /**
 * Add styles/classes to the "Styles" drop-down
 */
-function _s__mce_before_init( $settings ) {
+function _s_mce_before_init( $settings ) {
 
    $style_formats = array(
         array(
@@ -389,4 +389,4 @@ function _s__mce_before_init( $settings ) {
    return $settings;
 
 }
-add_filter( 'tiny_mce_before_init', '_s__mce_before_init' );
+add_filter( 'tiny_mce_before_init', '_s_mce_before_init' );
