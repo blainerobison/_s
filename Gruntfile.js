@@ -68,8 +68,6 @@ module.exports = function ( grunt ) {
                         '<%= config.src %>/js/plugins/boilerplate.js',
                         '<%= config.src %>/js/plugins/offcanvas.js',
                         '<%= config.src %>/js/plugins/jquery.magnific-popup.js',
-                        '<%= config.src %>/js/plugins/jquery.cycle2.js',
-                        '<%= config.src %>/js/plugins/jquery.cycle2.swipe.js'
                     ]
                 }
             }
