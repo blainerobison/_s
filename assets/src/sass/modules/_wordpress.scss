@@ -13,27 +13,27 @@
 
 .alignleft {
    @include mq( $from: sm ) {
-       margin-right: 1.3em;
-       margin-bottom: 1.3em;
-       display: inline;
-       float: left;
+        margin-right: 1.3em;
+        margin-bottom: 1.3em;
+        display: inline;
+        float: left;
    }
 }
 
 .alignright {
    @include mq( $from: sm ) {
-       margin-left: 1.3em;
-       margin-bottom: 1.3em;
-       display: inline;
-       float: right;
+        margin-left: 1.3em;
+        margin-bottom: 1.3em;
+        display: inline;
+        float: right;
    }
 }
 
 .aligncenter {
    @include mq( $from: sm ) {
-       clear: both;
-       display: block;
-       margin: 0 auto;
+        clear: both;
+        display: block;
+        margin: 0 auto;
    }
 }
 
