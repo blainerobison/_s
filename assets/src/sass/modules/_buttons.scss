@@ -3,7 +3,10 @@
 // Buttons
 // ==========================================================================
 
-.btn  {
+// '.btn--primary' is redundant when using '.btn' alone. Include it when also
+// using '.btn--outline'.
+.btn,
+.btn--primary  {
     position: relative;
     line-height: 1;
     display: inline-block;
