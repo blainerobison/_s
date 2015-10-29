@@ -262,6 +262,7 @@
 // Pagination
 // ==========================================================================
 
+    // pagination
     $pagination-color                                      : $font-color !default;
     $pagination-bg                                         : transparent !default;
     $pagination-border                                     : color( geyser ) !default;
@@ -273,3 +274,9 @@
     $pagination-dots                                       : color( ghost );
 
     $page-count                                            : color( ghost );
+
+    // single post navigation
+    $post-navigation-color                                 : $font-color;
+    $post-navigation-border                                : color( geyser );
+
+    $post-navigation-hover-color                           : color( azure );

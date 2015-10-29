@@ -390,3 +390,37 @@ function _s_mce_before_init( $settings ) {
 
 }
 add_filter( 'tiny_mce_before_init', '_s_mce_before_init' );
+
+
+
+
+
+/**
+ * Add Class to Previous Posts Link
+ *
+ * @param  string $atts empty string
+ * @return string
+ */
+function _s_previous_posts_link_attributes( $atts ) {
+
+    return 'class="btn btn--outline btn--pill btn--icon-right"';
+
+}
+add_action( 'previous_posts_link_attributes', '_s_previous_posts_link_attributes', 10 );
+
+
+
+
+
+/**
+ * Add Class to Next Posts Link
+ *
+ * @param  string $atts empty string
+ * @return string
+ */
+function _s_next_posts_link_attributes( $atts ) {
+
+    return 'class="btn btn--outline btn--pill btn--icon-left"';
+
+}
+add_action( 'next_posts_link_attributes', '_s_next_posts_link_attributes', 10 );

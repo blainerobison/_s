@@ -1,16 +1,67 @@
-<div class="pagination pagination--center">
-    <ul class="pagination-list"><!--
-     --><li class="pagination-list__item"><a class="prev page-numbers" href="#"><i class="icon-chevron-left"></i></a></li><!--
-     --><li class="pagination-list__item"><a class="page-numbers" href="#">1</a></li><!--
-     --><li class="pagination-list__item"><span class="page-numbers dots">&hellip;</span></li><!--
-     --><li class="pagination-list__item"><a class="page-numbers" href="#">3</a></li><!--
-     --><li class="pagination-list__item"><a class="page-numbers" href="#">4</a></li><!--
-     --><li class="pagination-list__item"><span class="page-numbers current">5</span></li><!--
-     --><li class="pagination-list__item"><a class="page-numbers" href="#">6</a></li><!--
-     --><li class="pagination-list__item"><a class="page-numbers" href="#">7</a></li><!--
-     --><li class="pagination-list__item"><span class="page-numbers dots">&hellip;</span></li><!--
-     --><li class="pagination-list__item"><a class="page-numbers" href="#">18</a></li><!--
-     --><li class="pagination-list__item"><a class="next page-numbers" href="#"><i class="icon-chevron-right"></i></a></li><!--
- --></ul>
-    <div class="page-count">Showing: 9&ndash;10 of 36</div>
+<div class="row">
+    <div class="medium-4 columns">
+        <h6 class="heading--normal">Pagination</h6>
+    </div>
+    <div class="medium-8 columns">
+        <div class="pagination pagination--center">
+            <ul class="pagination-list"><!--
+             --><li class="pagination-list__item"><a class="prev page-numbers" href="#"><i class="icon-chevron-left"></i></a></li><!--
+             --><li class="pagination-list__item"><a class="page-numbers" href="#">1</a></li><!--
+             --><li class="pagination-list__item"><span class="page-numbers dots">&hellip;</span></li><!--
+             --><li class="pagination-list__item"><a class="page-numbers" href="#">3</a></li><!--
+             --><li class="pagination-list__item"><a class="page-numbers" href="#">4</a></li><!--
+             --><li class="pagination-list__item"><span class="page-numbers current">5</span></li><!--
+             --><li class="pagination-list__item"><a class="page-numbers" href="#">6</a></li><!--
+             --><li class="pagination-list__item"><a class="page-numbers" href="#">7</a></li><!--
+             --><li class="pagination-list__item"><span class="page-numbers dots">&hellip;</span></li><!--
+             --><li class="pagination-list__item"><a class="page-numbers" href="#">18</a></li><!--
+             --><li class="pagination-list__item"><a class="next page-numbers" href="#"><i class="icon-chevron-right"></i></a></li><!--
+         --></ul>
+            <div class="page-count">Showing: 9&ndash;10 of 36</div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="medium-4 columns">
+        <h6 class="heading--normal">Posts Navigation</h6>
+        Markup rendered by WordPress using <a href="https://developer.wordpress.org/reference/functions/get_the_posts_navigation/" target="_blank"><code class="code">get_the_posts_navigation()</code></a>.
+    </div>
+    <div class="medium-8 columns">
+        <nav class="navigation posts-navigation" role="navigation">
+            <h2 class="screen-reader-text">Posts navigation</h2>
+            <div class="nav-links">
+                <div class="nav-previous">
+                    <a href="#" class="btn btn--outline btn--pill btn--icon-left">
+                        <i class="icon-arrow-left"></i> Older
+                    </a>
+                </div>
+                <div class="nav-next">
+                    <a href="#" class="btn btn--outline btn--pill btn--icon-right">
+                        Newer <i class="icon-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="medium-4 columns">
+        <h6 class="heading--normal">Post Navigation</h6>
+        Markup rendered by WordPress using <a href="https://developer.wordpress.org/reference/functions/get_the_post_navigation/" target="_blank"><code class="code">get_the_post_navigation()</code></a>.
+    </div>
+    <div class="medium-8 columns">
+        <nav class="navigation post-navigation" role="navigation">
+            <h2 class="screen-reader-text">Post navigation</h2>
+            <div class="nav-links">
+                <div class="nav-previous">
+                    <a href="#" rel="prev">Lorem Ipsum Dolor Sit Amet</a>
+                </div>
+                <div class="nav-next">
+                    <a href="#" rel="next">Consectetur Adipisicing Elit</a>
+                </div>
+            </div>
+        </nav>
+    </div>
 </div>

@@ -64,3 +64,18 @@
     color: $page-count;
     @include rem( 'font-size', 10px );
 }
+
+
+
+
+
+/* Previous / Next Links
+   ========================================================================== */
+
+// WordPress native functions. Styling can be found in '_wordpress.scss"'
+//
+// - get_the_posts_navigation()
+// - get_the_post_navigation()
+//
+// @link https://developer.wordpress.org/reference/functions/get_the_posts_navigation/
+// @link https://developer.wordpress.org/reference/functions/get_the_post_navigation/

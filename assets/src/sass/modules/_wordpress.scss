@@ -83,3 +83,47 @@
  * More tag => the_content, the_exerpt, <!-- more-->
  */
 .more-link {}
+
+
+
+
+
+/* Previous / Next Links
+   ========================================================================== */
+
+// Posts Navigation
+.posts-navigation {
+    @include rem( 'margin-bottom', $spacer-y );
+
+    .nav-previous,
+    .nav-next {
+        display: inline-block;
+        @include rem( 'margin', 0 8px );
+    }
+}
+
+// Single Post Navigation
+.post-navigation {
+    border: 1px solid $post-navigation-border;
+    @include rem( 'margin-bottom', $spacer-y );
+
+    .nav-previous,
+    .nav-next {
+
+        a {
+            display: block;
+            color: $post-navigation-color;
+            @include rem( 'padding', 4px 8px );
+
+            &:hover {
+                color: $post-navigation-hover-color;
+            }
+        }
+    }
+
+    .nav-next {
+        border-top: 1px solid $post-navigation-border;
+    }
+}
+
+
