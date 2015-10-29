@@ -195,3 +195,15 @@
         display: none !important;
     }
 }
+
+
+
+
+
+/* Code
+   ========================================================================== */
+
+.code {
+    background-color: color( catskill );
+    @include rem( 'padding', 0 4px );
+}
