@@ -258,3 +258,19 @@
     $alert-error-bg                                        : $state-error-lt !default;
     $alert-error-color                                     : $state-error !default;
     $alert-error-border                                    : $state-error-lt !default;
+
+// ==========================================================================
+// Pagination
+// ==========================================================================
+
+    $pagination-color                                      : $font-color !default;
+    $pagination-bg                                         : transparent !default;
+    $pagination-border                                     : color( geyser ) !default;
+
+    $pagination-hover-color                                : white !default;
+    $pagination-hover-bg                                   : color( azure ) !default;
+    $pagination-hover-border                               : color( azure ) !default;
+
+    $pagination-dots                                       : color( ghost );
+
+    $page-count                                            : color( ghost );

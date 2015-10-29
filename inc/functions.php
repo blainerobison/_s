@@ -457,8 +457,8 @@ function _s_pagination( $query = false, $echo = true ) {
         'total'              => $total_pages,
         'current'            => $current_page,
         'prev_next'          => true,
-        'prev_text'          => '<i class="icon-keyboard-arrow-left"></i>',
-        'next_text'          => '<i class="icon-keyboard-arrow-right"></i>',
+        'prev_text'          => '<i class="icon-chevron-left"></i>',
+        'next_text'          => '<i class="icon-chevron-right"></i>',
         'type'               => 'array',
         'show_all'           => false,
         'end_size'           => 1,
@@ -473,14 +473,14 @@ function _s_pagination( $query = false, $echo = true ) {
     if( !$pages ) // returns null if only 1 page of results
         return;
 
-    $r = '<div class="pagination-wrap pagination-centered">' . "\n";
-    $r .= '    <ul class="pagination">' . "\n";
+    $r = '<div class="pagination pagination--center">' . "\n";
+    $r .= '    <ul class="pagination-list"><!--' . "\n";
 
     foreach( $pages as $page ) {
-        $r .= '        <li class="pagination__item">' . $page . '</li>' . "\n";
+        $r .= '     --><li class="pagination-list__item">' . $page . '</li><!--' . "\n";
     }
 
-    $r .= '    </ul>' . "\n";
+    $r .= ' --></ul>' . "\n";
 
     $page_count = _s_result_count_output( array(
         'query' => $query,

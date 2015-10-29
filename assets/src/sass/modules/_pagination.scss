@@ -3,51 +3,64 @@
 // Pagination
 // ==========================================================================
 
-.pagination-centered {
-    margin: 1em 0;
+.pagination {
+    @include rem( 'margin-bottom', $spacer-y );
+}
+
+.pagination--center {
     text-align: center;
 }
 
-.pagination {
-    margin: 0 0 1em 0;
+.pagination-list {
     padding: 0;
     list-style-type: none;
-    text-transform: uppercase;
-    @include rem( 'font-size', 13px );
+    @include rem( 'margin', 0 0 $spacer-y );
 }
 
-.pagination__item {
-    margin-bottom: 5px;
+.pagination-list__item {
     display: inline-block;
+    vertical-align: middle;
+    color: $pagination-color;
+    @include rem( 'margin-left', -1px );
 
-    span {
-        padding: 0 .7em;
+    span,
+    a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        display: block;
+        text-align: center;
     }
 
     a {
-        padding: .4em .9em;
         display: block;
-        background-color: color( catskill );
-        color: darken( color( geyser ), 10% );
-        @include transition-property( background, color );
-        @include transition-duration( .15s );
+        background-color: $pagination-bg;
+        border: 1px solid $pagination-border;
+        color: $pagination-color;
 
         &:hover {
-            background-color: $state-success;
-            color: #fff;
+            color: $pagination-hover-color;
+            background-color: $pagination-hover-bg;
+            border-color: $pagination-hover-border;
         }
     }
 
     .current {
-            color: $state-success;
+        color: $pagination-hover-color;
+        background-color: $pagination-hover-bg;
+        border-color: $pagination-hover-border;
     }
 
     .dots {
-        color: #b3b3b3;
+        color: $pagination-dots;
+    }
+
+    &:first-child {
+        margin-left: 0;
     }
 }
 
 .page-count {
-    font-size: .625em;
-    color: #ccc;
+    color: $page-count;
+    @include rem( 'font-size', 10px );
 }
