@@ -180,26 +180,34 @@
     $btn-padding-y                                         : 16px !default;
     $btn-text-transform                                    : none !default;
 
-    $btn-primary-color                                     : white !default;
-    $btn-primary-color-hover                               : white !default;
+    // primary
     $btn-primary-bg                                        : color( azure ) !default;
     $btn-primary-border                                    : color( azure ) !default;
+    $btn-primary-color                                     : white !default;
 
-    $btn-secondary-color                                   : white !default;
-    $btn-secondary-color-hover                             : white !default;
+    $btn-primary-color-hover                               : white !default;
+
+    // secondary
     $btn-secondary-bg                                      : color( waterloo ) !default;
-    $btn-secondary-border                                  : color( waterloo ) !default;
+    $btn-secondary-color                                   : white !default;
 
-    $btn-tertiary-color                                    : $font-color !default;
-    $btn-tertiary-color-hover                              : $font-color !default;
+    $btn-secondary-border-hover                            : color( waterloo ) !default;
+
+    // tertiary
     $btn-tertiary-bg                                       : color( catskill ) !default;
     $btn-tertiary-border                                   : color( ghost ) !default;
+    $btn-tertiary-color                                    : $font-color !default;
 
-    $btn-outline-color                                     : $btn-primary-bg !default;
-    $btn-outline-color-hover                               : white !default;
+    $btn-tertiary-color-hover                              : $font-color !default;
+
+    // outline
     $btn-outline-bg                                        : transparent !default;
+    $btn-outline-border                                    : color( geyser ) !default;
+    $btn-outline-color                                     : $font-color !default;
+
     $btn-outline-bg-hover                                  : $btn-primary-bg !default;
-    $btn-outline-border                                    : $btn-primary-bg !default;
+    $btn-outline-border-hover                              : color( azure ) !default;
+    $btn-outline-color-hover                               : white !default;
 
     // Allows for customizing button radius independently from global border radius
     $btn-border-radius                                     :$border-radius;
