@@ -77,6 +77,8 @@
 // Plugins
 // ==========================================================================
 
-@import "plugins/gravityforms",
-        "../../../bower_components/magnific-popup/dist/magnific-popup.css",
-        "plugins/magnific-popup";
+@import "../../../bower_components/magnific-popup/dist/magnific-popup.css",
+        "../../../bower_components/slick-carousel/slick/slick.css",
+        "plugins/gravityforms",
+        "plugins/magnific-popup",
+        "plugins/slick";
