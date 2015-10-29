@@ -66,7 +66,8 @@ module.exports = function ( grunt ) {
                 files: {
                     '<%= config.dist %>/js/plugins.js': [
                         '<%= config.src %>/js/plugins/boilerplate.js',
-                        '<%= config.src %>/js/plugins/offcanvas.js'
+                        '<%= config.src %>/js/plugins/offcanvas.js',
+                        'bower_components/magnific-popup/dist/jquery.magnific-popup.js'
                     ]
                 }
             }

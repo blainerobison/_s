@@ -92,4 +92,5 @@ $mq-static-breakpoint: site;
 // ==========================================================================
 
 @import "plugins/gravityforms",
+        "../../../bower_components/magnific-popup/dist/magnific-popup.css",
         "plugins/magnific-popup";
