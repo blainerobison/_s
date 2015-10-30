@@ -3,3 +3,36 @@
 // Customizations
 // ==========================================================================
 
+.slick-slide {
+    outline: none;
+}
+
+.slick-dots {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    > li {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        background: color( geyser );
+        border-radius: 500px;
+        cursor: pointer;
+        @include rem( 'margin', 4px );
+        @include transition( background .15s, transform .15s );
+
+        &:hover,
+        &.slick-active {
+            background-color: color( azure );
+            @include transform( scale( 1.25, 1.25 ) );
+        }
+
+        button {
+            border: none;
+            background: color( geyser );
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}
