@@ -47,6 +47,17 @@
 }
 
 //
+// Opacity
+//
+.is-opaque {
+    opacity: 0;
+}
+
+.is-transparent {
+    opacity: 1;
+}
+
+//
 // Set fixed states
 //
 .is-fixed {
