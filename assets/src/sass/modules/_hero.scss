@@ -1,0 +1,142 @@
+
+// ==========================================================================
+// Hero
+// ==========================================================================
+
+// Variables
+// --------------------------------------------------------------------------
+
+$hero-bg: color( tundora ) !default;
+
+$hero-supheading-bg: color( azure ) !default;
+$hero-supheading-color: white !default;
+
+$hero-heading-bg: color( azure ) !default;
+$hero-heading-color: white !default;
+
+
+
+
+
+.hero {}
+
+/**
+ * 1. Mitigate FOUC when using Slick.js
+ */
+.hero__lining {
+    position: relative;
+    background-color: $hero-bg;
+    background-position: center top;
+    background-size: cover;
+    display: none; /* 1 */
+    @include rem( 'margin-bottom', 75px );
+
+    &:first-child {
+        display: block; /* 1 */
+    }
+}
+
+.hero__content-wrap {
+    @extend %l-constrain;
+    min-height: 550px;
+    position: relative;
+}
+
+.hero__content {
+    width: 100%;
+    position: absolute;
+    bottom: -75px;
+    left: 0;
+}
+
+.hero__header {
+    display: inline-block;
+    vertical-align: bottom;
+    @include clearfix;
+
+    @include mq( $from: xs ) {
+        max-width: 70%;
+        @include rem( 'margin-right', 16px );
+    }
+
+    @include mq( $from: md ) {
+        max-width: 80%;
+    }
+}
+
+.hero__supheading {
+    float: left;
+    background-color: $hero-supheading-bg;
+    font-weight: 700;
+    color: $hero-supheading-color;
+    @include rem( 'padding', 8px );
+    @include rem( 'font-size', 18px );
+
+    @include mq( $from: xs ) {
+        @include rem( 'padding', 8px 16px );
+    }
+}
+
+.hero__heading {
+    margin: 0;
+    float: left;
+    clear: left;
+    background-color: $hero-heading-bg;
+    text-transform: none;
+    color: $hero-heading-color;
+    @include rem( 'padding', 8px );
+
+    @include mq( $from: xs ) {
+        @include rem( 'padding', 8px 16px );
+    }
+
+    > br {
+        @include mq( $until: xs ) {
+            display: none;
+        }
+    }
+}
+
+.hero__link {
+    line-height: 1;
+    display: inline-block;
+    vertical-align: bottom;
+    font-weight: 700;
+    text-transform: uppercase;
+    @include rem( 'padding', 16px 0 0 );
+    @include rem( 'font-size', 18px );
+}
+
+
+
+
+
+/* Slickjs Overrides
+   ========================================================================== */
+
+.hero {
+
+    .slick-dots {
+        @include mq( $until: xs ) {
+            @include rem( 'margin-top', $spacer-y );
+        }
+        @include mq( $from: xs ) {
+            position: absolute;
+            right: 0;
+            bottom: 40px;
+        }
+    }
+}
+
+.slick-slide {
+
+    .hero__content {
+        opacity: 0;
+        @include transition( opacity .35s ease-in-out );
+
+        .no-js &,
+        &.is-transparent {
+            opacity: 1;
+        }
+    }
+}

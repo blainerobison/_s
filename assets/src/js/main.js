@@ -6,6 +6,7 @@
         var EV = {
             init : function() {
                 this.utils.init();
+                this.hero();
                 this.alerts();
                 this.patternLibrary();
             },
@@ -90,6 +91,33 @@
                         $('html, body').animate( { scrollTop: scrollPoint.top }, 300 );
                     });
                 }
+            },
+
+            hero : function() {
+
+                var $slider = $('.js-hero'),
+                    $slides = $slider.find('.hero__lining');
+
+                $slider
+                    .on( 'init', function( slick ) {
+                        $slides.eq(0).find('.hero__content').addClass('is-transparent');
+                    })
+                    .slick({
+                        dots: true,
+                        arrows: false,
+                        adaptiveHeight: true
+                    })
+                    .on( 'beforeChange', function( e, slick, currSlide, nextSlide ) {
+
+                        // Only transition when slide advances
+                        if ( currSlide != nextSlide ) {
+                            $slides.eq( currSlide ).find('.hero__content').removeClass('is-transparent');
+                        }
+                    })
+                    .on( 'afterChange', function( e, slick, currSlide, nextSlide ) {
+                        $slides.eq( currSlide ).find('.hero__content').addClass('is-transparent');
+                    });
+
             },
 
             alerts : function() {
