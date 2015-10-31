@@ -201,13 +201,13 @@
     $btn-tertiary-color-hover                              : $font-color !default;
 
     // outline
-    $btn-outline-bg                                        : transparent !default;
+    $btn-outline-bg                                        : white !default;
     $btn-outline-border                                    : color( geyser ) !default;
     $btn-outline-color                                     : $font-color !default;
 
-    $btn-outline-bg-hover                                  : $btn-primary-bg !default;
-    $btn-outline-border-hover                              : color( azure ) !default;
-    $btn-outline-color-hover                               : white !default;
+    $btn-outline-bg-hover                                  : color( haze ) !default;
+    $btn-outline-border-hover                              : darken( color( haze ), 8% ) !default;
+    $btn-outline-color-hover                               : $font-color !default;
 
     // Allows for customizing button radius independently from global border radius
     $btn-border-radius                                     :$border-radius;

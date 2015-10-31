@@ -82,12 +82,12 @@
 }
 
 .btn--outline {
-    background-color: transparent;
+    background-color: $btn-outline-bg;
     border-color: $btn-outline-border;
     color: $btn-outline-color;
 
     &:hover {
-        background-color: darken( $btn-outline-bg-hover, 8% );
+        background-color: $btn-outline-bg-hover;
         border-color: $btn-outline-border-hover;
         color: $btn-outline-color-hover;
     }
