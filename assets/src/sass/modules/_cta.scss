@@ -1,0 +1,172 @@
+
+// ==========================================================================
+// CTA
+// ==========================================================================
+
+// Variables
+// --------------------------------------------------------------------------
+
+// cta
+$cta-bg                                                    : color( orange );
+$cta-gradient                                              : color( orange );
+$cta-gradient-ie                                           : ie-hex-str( rgba( $cta-gradient, .6 ) );
+$cta-heading-color                                         : white;
+
+// cta button
+$cta-btn-bg                                                : color( orange );
+$cta-btn-border-radius                                     : $border-radius;
+$cta-btn-heading-color                                     : white;
+$cta-btn-icon-bg                                           : darken( color( orange ), 14% );
+
+$cta-btn-bg-hover                                          : darken( color( orange ), 14% );
+
+
+
+
+
+/* Call-to-Action
+   ========================================================================== */
+
+.cta {
+    display: inline-block;
+    background-color: $cta-bg;
+    @include rem( 'padding', 24px );
+    @include clearfix;
+
+    @include mq( $until: xxs ) {
+        text-align: center;
+    }
+}
+
+.cta--bg {
+    position: relative;
+    background-position: center top;
+    background-size: cover;
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff6633+0,ff6633+100&amp;0.6+0,0.65+30,1+50,1+100 */
+        background: -moz-linear-gradient(left,  rgba( $cta-gradient,0.6) 0%, rgba( $cta-gradient,0.65) 30%, rgba( $cta-gradient,1) 50%, rgba( $cta-gradient,1) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba( $cta-gradient,0.6)), color-stop(30%,rgba( $cta-gradient,0.65)), color-stop(50%,rgba( $cta-gradient,1)), color-stop(100%,rgba( $cta-gradient,1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(left,  rgba( $cta-gradient,0.6) 0%,rgba( $cta-gradient,0.65) 30%,rgba( $cta-gradient,1) 50%,rgba( $cta-gradient,1) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(left,  rgba( $cta-gradient,0.6) 0%,rgba( $cta-gradient,0.65) 30%,rgba( $cta-gradient,1) 50%,rgba( $cta-gradient,1) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(left,  rgba( $cta-gradient,0.6) 0%,rgba( $cta-gradient,0.65) 30%,rgba( $cta-gradient,1) 50%,rgba( $cta-gradient,1) 100%); /* IE10+ */
+        background: linear-gradient(to right,  rgba( $cta-gradient,0.6) 0%,rgba( $cta-gradient,0.65) 30%,rgba( $cta-gradient,1) 50%,rgba( $cta-gradient,1) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$cta-gradient-ie}', endColorstr='#{$cta-gradient}',GradientType=1 ); /* IE6-9 */
+    }
+}
+
+.cta--full {
+    display: block;
+}
+
+.cta__image {
+    @include mq( $until: xxs ) {
+        @include rem( 'margin-bottom', 16px );
+    }
+    @include mq( $from: xxs ) {
+        float: left;
+    }
+
+    .cta--bg & {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.cta__content {
+    overflow: hidden;
+
+    @include mq( $from: xxs ) {
+        @include rem( 'margin', 0 0 0 164px );
+    }
+
+    .cta--bg & {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.cta__heading {
+    color: $cta-heading-color;
+    @include rem( 'font-size', 29px );
+
+    > br {
+        @include mq( $until: xxs ) {
+            display: none;
+        }
+    }
+}
+
+.cta__btn {
+    @include rem( 'margin-top', 16px );
+}
+
+
+
+
+
+/* Call-to-Action Button
+   ========================================================================== */
+
+.cta-btn {
+    position: relative;
+    display: inline-block;
+    background-color: $cta-btn-bg;
+    border-radius: $cta-btn-border-radius;
+
+    &:hover {
+        background-color: $cta-btn-bg-hover;
+    }
+}
+
+.cta-btn--full {
+    display: block;
+}
+
+.cta-btn__heading {
+    color: $cta-btn-heading-color;
+    @include rem( 'margin', 0 112px 0 0 );
+    @include rem( 'padding', 24px );
+    @include rem( 'font-size', 29px );
+}
+
+.cta-btn__supheading {
+    display: block;
+    @include rem( 'font-size', 18px );
+}
+
+.cta-btn__icon {
+    width: 112px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $cta-btn-icon-bg;
+    border-radius: 0 $cta-btn-border-radius $cta-btn-border-radius 0;
+    color: white;
+    @include rem( 'font-size', 48px );
+
+    &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: .8;
+        @include transform( translateX( -50% ) translateY( -50% ) );
+        @include transition( transform .15s, opacity .15s );
+
+        .cta-btn:hover & {
+            opacity: 1;
+            @include transform( translateX( -50% ) translateY( -40% ) );
+        }
+    }
+}
