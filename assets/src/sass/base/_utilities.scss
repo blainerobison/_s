@@ -1,0 +1,178 @@
+
+// ==========================================================================
+// Helpers
+// ==========================================================================
+
+%hidden {
+    /*
+     * Hide visually and from screen readers:
+     * http://juicystudio.com/article/screen-readers-display-none.php
+     */
+    display: none !important;
+    visibility: hidden;
+}
+
+%visuallyhidden {
+    /*
+     * Hide only visually, but have it available for screen readers:
+     * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+     */
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+
+    /*
+     * Extends the .visuallyhidden class to allow the element to be focusable
+     * when navigated to via the keyboard: h5bp.com/p
+     */
+    &.focusable:active,
+    &.focusable:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+
+    }
+}
+
+%invisible {
+    /*
+    * Hide visually and from screenreaders, but maintain layout
+    */
+    visibility: hidden;
+}
+
+
+
+
+
+/* Visibility
+   ========================================================================== */
+
+.visuallyhidden,
+.screen-reader-text {
+    @extend %visuallyhidden;
+}
+
+
+
+
+
+/* Corners
+   ========================================================================== */
+
+.corner {
+    border-radius: 4px;
+}
+
+
+
+
+
+/* Borders
+   ========================================================================== */
+
+.border {
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border: 1px solid $alto;
+}
+
+.border--bottom {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+
+
+
+
+/* Text
+   ========================================================================== */
+
+.text-center {
+    text-align: center;
+}
+
+.text-center--mobile {
+    @include mq( $until: tablet ) {
+        text-align: center;
+    }
+}
+
+.text-center--desktop {
+    @include mq( $from: tablet ) {
+        text-align: center;
+    }
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-right--mobile {
+    @include mq( $until: tablet ) {
+        text-align: right;
+    }
+}
+
+.text-right--desktop {
+    @include mq( $from: tablet ) {
+        text-align: right;
+    }
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.text-upper {
+    text-transform: uppercase;
+}
+
+
+
+
+
+/* Alignment
+   ========================================================================== */
+
+.pull-center {
+    margin: 0 auto;
+    display: block;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+
+
+
+
+/* Hidden
+   ========================================================================== */
+
+.hide-on-mobile {
+    @include mq( $until: tablet ) {
+        display: none !important;
+    }
+}
+
+.hide-on-desktop {
+    @include mq( $from: tablet ) {
+        display: none !important;
+    }
+}
