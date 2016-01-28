@@ -71,13 +71,17 @@ textarea {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: underline;
     color: $link-color;
     @include transition-property( color, background, border );
     @include transition-duration( .15s );
 
     &:hover {
         color: $link-color-hover;
+    }
+
+    &:visited {
+        color: $font-color;
     }
 }
 
