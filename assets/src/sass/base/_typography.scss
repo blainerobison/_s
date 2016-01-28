@@ -71,7 +71,7 @@ textarea {
 }
 
 a {
-    text-decoration: underline;
+    text-decoration: none;
     color: $link-color;
     @include transition-property( color, background, border );
     @include transition-duration( .15s );
