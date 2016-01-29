@@ -15,9 +15,7 @@
 }
 
 .tabs__item {
-    // @include mq( $from: xs ) {
-        display: inline-block;
-    // }
+    display: inline-block;
 }
 
 .tabs__link {
@@ -30,7 +28,7 @@
 
     &:hover,
     .is-active & {
-        background-color: color( catskill );
+        background-color: color( haze );
         color: $link-color-hover;
     }
 }
