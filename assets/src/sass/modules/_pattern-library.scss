@@ -7,7 +7,11 @@
 /* Hero
    ========================================================================== */
 
+/**
+ * 1. Keep background panel on '.pl-hero__column' from busting out
+ */
 .pl-hero {
+    overflow: hidden; /* 1 */
     background-color: color( azure );
     @include rem( 'padding', 16px );
 }
@@ -46,6 +50,9 @@
     }
 }
 
+/**
+ * 1. Background panel styling
+ */
 .pl-hero__column {
     @include mq( $until: sm ) {
         text-align: center;
@@ -53,11 +60,33 @@
 
     @include mq( $from: sm ) {
         &:first-child {
-            padding-left: 200px;
-        }
+            padding-left: 125px;
 
-        & + & {
-            text-align: center;
+            /* 1 */
+            position: relative;
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+            }
+            &:before {
+                right: 100%;
+                width: 100%;
+                height: 1000px;
+                background-color: darken( color( azure ), 7% );
+                @include transform( translateY( -50% ) );
+            }
+            &:after {
+                width: 0;
+                height: 0;
+                top: 50%;
+                right: 100%;
+                border-style: solid;
+                border-width: 25px 25px 25px 0;
+                border-color: transparent color( azure ) transparent transparent;
+                @include transform( translateY( -50% ) );
+            }
+            /* 1 */
         }
     }
 }
