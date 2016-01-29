@@ -8,6 +8,7 @@
                 this.utils.init();
                 this.hero();
                 this.tabs();
+                this.accordions.init();
                 this.alerts();
                 this.patternLibrary();
             },
@@ -166,6 +167,45 @@
                         // set active tab
                         setTab( $(this).closest('.tabs__item') );
                     });
+
+            },
+
+            accordions : {
+
+                init : function() {
+                    this.bind();
+                },
+
+                bind : function() {
+                    $('.js-accordion').on( 'click', 'a', this.action.bind(this) );
+                },
+
+                action : function( e ) {
+
+                    var $this    = $(e.currentTarget),
+                        $item    = $this.closest('.accordion__item'),
+                        $items   = $item.siblings(),
+                        $content = $item.find('.accordion__content');
+
+                        if ( $item.hasClass('is-active') ) {
+
+                            // remove active
+                            $item.removeClass('is-active');
+                            $content.slideUp();
+
+                        } else {
+
+                            // toggle inactive
+                            $items.removeClass('is-active');
+                            $items.find('.accordion__content').slideUp();
+
+                            // toggle active
+                            $item.addClass('is-active');
+                            $content.slideDown();
+                        }
+
+                    e.preventDefault();
+                }
 
             },
 

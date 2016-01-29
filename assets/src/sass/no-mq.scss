@@ -67,7 +67,8 @@ $mq-static-breakpoint: site;
 // Modules
 // ==========================================================================
 
-@import "modules/alerts",
+@import "modules/accordions",
+        "modules/alerts",
         "modules/callout",
         "modules/cta",
         "modules/hero",

@@ -1,0 +1,85 @@
+
+// ==========================================================================
+// Accordions
+// ==========================================================================
+
+// Variables
+// --------------------------------------------------------------------------
+
+// Accordion
+$accordion-border-color                                    : color( geyser ) !default;
+
+// Icon
+$accordion-icon-bg                                         : color( ghost ) !default;
+
+// Title
+$accordion-title-bg                                        : transparent !default;
+$accordion-title-color                                     : $font-color !default;
+
+$accordion-title-bg-hover                                  : color( haze ) !default;
+$accordion-title-color-hover                               : $link-color-hover !default;
+
+
+
+
+
+.accordion {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border: 1px solid $accordion-border-color;
+    border-bottom: 0;
+}
+
+.accordion__item {}
+
+.accordion__title {
+    position: relative;
+    display: block;
+    background-color: $accordion-title-bg;
+    color: $accordion-title-color;
+    border-bottom: 1px solid $accordion-border-color;
+    @include rem( 'padding', 10px 20px );
+    @include rem( 'font-size', 14px );
+
+    &:hover,
+    .is-active & {
+        background-color: $accordion-title-bg-hover;
+        color: $accordion-title-color-hover;
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        width: 10px;
+        height: 2px;
+        display: block;
+        background-color: $accordion-icon-bg;
+        position: absolute;
+        top: 50%;
+        @include rem( 'right', 16px );
+        @include transition( all .25s );
+    }
+
+    &:before {
+        @include transform( rotate( 45deg ) translateY( -4px ) );
+
+        .is-active & {
+            @include transform( rotate( 135deg ) translateY( -4px ) );
+        }
+    }
+
+    &:after {
+        @include transform( rotate( -45deg ) translateY( 4px ) );
+
+        .is-active & {
+            @include transform( rotate( 45deg ) translateY( 4px ) );
+        }
+    }
+}
+
+.accordion__content {
+    display: none;
+    border-bottom: 1px solid $accordion-border-color;
+    @include rem( 'padding', 24px );
+}
