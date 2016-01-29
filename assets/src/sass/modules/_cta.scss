@@ -162,7 +162,7 @@ $cta-btn-bg-hover                                          : darken( color( oran
         left: 50%;
         opacity: .8;
         @include transform( translateX( -50% ) translateY( -50% ) );
-        @include transition( transform .15s, opacity .15s );
+        @include transition( all .25s );
 
         .cta-btn:hover & {
             opacity: 1;
