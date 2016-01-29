@@ -1,0 +1,57 @@
+
+// ==========================================================================
+// Tabs
+// ==========================================================================
+
+
+/* Tabs
+   ========================================================================== */
+
+.tabs {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border: 1px solid color( geyser );
+}
+
+.tabs__item {
+    // @include mq( $from: xs ) {
+        display: inline-block;
+    // }
+}
+
+.tabs__link {
+    display: block;
+    font-weight: 700;
+    text-align: center;
+    color: $font-color;
+    @include rem( 'padding', 10px 20px );
+    @include rem( 'font-size', 14px );
+
+    &:hover,
+    .is-active & {
+        background-color: color( catskill );
+        color: $link-color-hover;
+    }
+}
+
+
+
+
+
+/* Tab Panels
+   ========================================================================== */
+
+.tab-panels {
+    border: 1px solid color( geyser );
+    border-top: 0;
+}
+
+.tab-panel {
+    display: none;
+    @include rem( 'padding', 24px );
+
+    &.is-active {
+        display: block;
+    }
+}

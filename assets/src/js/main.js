@@ -7,6 +7,7 @@
             init : function() {
                 this.utils.init();
                 this.hero();
+                this.tabs();
                 this.alerts();
                 this.patternLibrary();
             },
@@ -116,6 +117,54 @@
                     })
                     .on( 'afterChange', function( e, slick, currSlide, nextSlide ) {
                         $slides.eq( currSlide ).find('.hero__content').addClass('is-transparent');
+                    });
+
+            },
+
+            tabs : function() {
+
+                function setTab( $el ) {
+
+                    if ( ! $el.hasClass('is-active' ) ) {
+
+                        var href        = $el.find('.tabs__link').attr('href'),
+                            $tabs       = $el.siblings(),
+                            $panelsWrap = $el.closest('.js-tabs').next('.tab-panels'),
+                            $panels     = $panelsWrap.find('.tab-panel'),
+                            $panel      = $panelsWrap.find(href);
+
+                        // set active tab class
+                        $el.addClass('is-active');
+                        $panel.addClass('is-active');
+
+                        // remove active class on other items
+                        $tabs.removeClass('is-active');
+                        $panels.not( $panel ).removeClass('is-active');
+                    }
+                }
+
+                // Set active tabs
+                $('.js-tabs')
+                    // set active on page load
+                    .each( function( index ) {
+
+                        var $this       = $(this),
+                            href        = $this.find('.tabs__link').attr('href'),
+                            $panelsWrap = $this.next('.tab-panels'),
+                            $panel      = $panelsWrap.find(href);
+
+                        // add active class
+                        $this.find('.tabs__item').eq(0).addClass('is-active');
+                        $panel.eq(0).addClass('is-active');
+
+                    })
+                    // set active tab on tab click
+                    .on( 'click', '.tabs__link', function( e ) {
+
+                        e.preventDefault();
+
+                        // set active tab
+                        setTab( $(this).closest('.tabs__item') );
                     });
 
             },
