@@ -3,6 +3,23 @@
 // Tabs
 // ==========================================================================
 
+// Variables
+// --------------------------------------------------------------------------
+
+// Tabs
+$tabs-border-color                                         : color( geyser ) !default;
+
+// Link
+$tabs-link-weight                                          : 700 !default;
+$tabs-link-bg                                              : transparent !default;
+$tabs-link-color                                           : $font-color !default;
+
+$tabs-link-bg-hover                                        : color( haze ) !default;
+$tabs-link-color-hover                                     : $link-color-hover !default;
+
+
+
+
 
 /* Tabs
    ========================================================================== */
@@ -11,7 +28,7 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
-    border: 1px solid color( geyser );
+    border: 1px solid $tabs-border-color;
 }
 
 .tabs__item {
@@ -20,16 +37,17 @@
 
 .tabs__link {
     display: block;
-    font-weight: 700;
+    font-weight: $tabs-link-weight;
     text-align: center;
-    color: $font-color;
+    background-color: $tabs-link-bg;
+    color: $tabs-link-color;
     @include rem( 'padding', 10px 20px );
     @include rem( 'font-size', 14px );
 
     &:hover,
     .is-active & {
-        background-color: color( haze );
-        color: $link-color-hover;
+        background-color: $tabs-link-bg-hover;
+        color: $tabs-link-color-hover;
     }
 }
 
@@ -41,7 +59,7 @@
    ========================================================================== */
 
 .tab-panels {
-    border: 1px solid color( geyser );
+    border: 1px solid $tabs-border-color;
     border-top: 0;
 }
 
