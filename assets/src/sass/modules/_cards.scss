@@ -1,0 +1,67 @@
+
+// ==========================================================================
+// Cards
+// ==========================================================================
+
+// Variables
+// --------------------------------------------------------------------------
+
+// Card
+$card-border-color                                         : color( geyser ) !default;
+
+// Link
+$tabs-link-weight                                          : 700 !default;
+$tabs-link-bg                                              : transparent !default;
+$tabs-link-color                                           : $font-color !default;
+
+$tabs-link-bg-hover                                        : color( haze ) !default;
+$tabs-link-color-hover                                     : $link-color-hover !default;
+
+
+
+
+
+/* Cards
+   ========================================================================== */
+
+.card {
+    background-color: white;
+    border: 1px solid $card-border-color;
+}
+
+.card--round {
+    border-radius: $border-radius;
+}
+
+.card__header,
+.card__footer {
+    margin: 0;
+    background-color: color( haze );
+    @include rem( 'padding', 16px );
+}
+
+.card__image {}
+
+.card__buffer {
+    @include rem( 'padding', 24px );
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.card__title {
+    font-weight: 700;
+    @include rem( 'font-size', 20px );
+}
+
+.card__copy {
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+
+// width image
+
+// shadow

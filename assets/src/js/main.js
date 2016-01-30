@@ -10,6 +10,7 @@
                 this.tabs();
                 this.accordions.init();
                 this.alerts();
+                this.bins.init();
                 this.patternLibrary();
             },
             vals : {
@@ -191,7 +192,7 @@
 
                             // remove active
                             $item.removeClass('is-active');
-                            $content.slideUp();
+                            $content.stop(true, true).slideUp();
 
                         } else {
 
@@ -201,7 +202,7 @@
 
                             // toggle active
                             $item.addClass('is-active');
-                            $content.slideDown();
+                            $content.stop(true, true).slideDown();
                         }
 
                     e.preventDefault();
@@ -218,6 +219,102 @@
                     e.preventDefault();
                 });
 
+            },
+
+            bins : {
+
+                init : function() {
+                    this.height();
+                },
+
+                height : function() {
+
+                    /**
+                     * Set bins to same height
+                     */
+                    var $container = $('.js-bins'),
+                        setHeights = function() {
+
+                            // iterate over each set of bins
+                            $container.each( function() {
+
+                                var $this    = $(this),
+                                    $bins   = $this.find('.bin'),
+                                    viewport = $this.data('bin-viewport') || 0;
+
+                                // reset card heights
+                                $bins.find('.bin__shiv').css('height', 'auto');
+
+                                if ( EV.vals.view > viewport ) {
+
+                                    // check container height to get height of tallest card
+                                    // var tallest = $this.height();
+
+                                    // check each bin to find tallest
+                                    // http://stackoverflow.com/a/6061029/3163972
+                                    var tallest = Math.max.apply(null, $bins.map(function () {
+                                        return $(this).height();
+                                    }).get());
+
+                                    $bins.each( function() {
+
+                                        var $this      = $(this),
+                                            cardHeight = $this.height(); // set to innerHeight when checking container height
+
+                                        // set height
+                                        if ( cardHeight < tallest ) {
+
+                                            $this.find('.bin__shiv').css('height', tallest - cardHeight );
+                                        }
+
+                                    });
+
+                                }
+                            });
+                        };
+
+                    // add shiv
+                    $container
+                        .find('[data-bin-shiv]')
+                        .after('<div class="bin__shiv"></div>');
+
+                    /**
+                     * set height on page load
+                     */
+                    setHeights();
+
+                    /**
+                     * Set height on resize
+                     */
+                    var resized  = false;
+
+                    // delay checking of window resize
+                    EV.vals.$window.on( 'resize', function() { resized = true; });
+
+                    setInterval( function() {
+
+                        if ( resized ) {
+
+                            resized = false;
+
+                            setHeights();
+                        }
+
+                    }, 250);
+
+                    /**
+                     * Set height after images have loaded
+                     *
+                     * Wait for images within card to load before calculating
+                     * height of card container
+                     *
+                     * Always - all images loaded whether successful or not
+                     */
+                    $container.imagesLoaded()
+                        .always( function( instance ) {
+                            setHeights();
+                        });
+                },
             },
 
             patternLibrary : function() {

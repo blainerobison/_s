@@ -1,0 +1,80 @@
+<div class="row">
+    <div class="medium-4 columns">
+        <h4>Regular</h4>
+        <p>Pick and choose card elements... the world is your oyster.</p>
+    </div>
+    <div class="medium-4 columns">
+        <div class="card">
+            <h6 class="card__header">Delectus Quasi</h6>
+            <img class="card__img" src="http://satyr.io/320x180" width="320" height="180" alt="">
+            <div class="card__buffer">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, quasi.</p>
+                <a class="btn" href="#">Sit Dolor</a>
+            </div>
+            <h6 class="card__footer">Delectus Quasi</h6>
+        </div>
+    </div>
+    <div class="medium-4 columns">
+        <div class="card">
+            <img class="card__img" src="http://satyr.io/320x180" width="320" height="180" alt="">
+            <div class="card__buffer">
+                <h4 class="card__title">Delectus Quasi</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, quasi.</p>
+            </div>
+            <a class="btn btn--full btn--edge btn--girth-sm" href="#">Sit Dolor</a>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="medium-4 columns">
+        <h4>Simple</h4>
+    </div>
+    <div class="medium-4 columns">
+        <div class="card">
+            <div class="card__buffer">
+                <h4 class="card__title">Delectus Quasi</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, quasi.</p>
+                <a class="btn" href="#">Sit Dolor</a>
+            </div>
+        </div>
+    </div>
+    <div class="medium-4 columns">
+        <div class="card">
+            <div class="card__buffer">
+                <h4 class="card__title">Delectus Quasi</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, quasi.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="row js-bins" data-bin-viewport="5">
+    <div class="medium-4 columns">
+        <h4>Equal Height</h4>
+        <p>Can be used with elements other than cards.</p>
+        <ol>
+            <li>Assign <code class="code">.js-bins</code> to grid container.</li>
+            <li>Set <code class="code">data-bin-viewport</code> on container to a value from <code class="code">_mq-check.scss</code>. Height calculations will be removed for that breakpoint and smaller.</li>
+            <li>Add class of <code class="code">.bin</code> on elements where equal height should be set.</li>
+            <li>Add <code class="code">data-bin-shiv</code>to element within <code class="code">.bin</code>. This appends element where height is applied.</li>
+        </ol>
+    </div>
+    <div class="medium-4 columns">
+        <div class="card bin">
+            <div class="card__buffer">
+                <h4 class="card__title">Delectus Quasi</h4>
+                <p data-bin-shiv>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, quasi.</p>
+                <a class="btn" href="#">Sit Dolor</a>
+            </div>
+        </div>
+    </div>
+    <div class="medium-4 columns">
+        <div class="card bin">
+            <div class="card__buffer">
+                <h4 class="card__title">Delectus Quasi</h4>
+                <p class="card__copy" data-bin-shiv>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, quasi.</p>
+            </div>
+        </div>
+    </div>
+</div>
