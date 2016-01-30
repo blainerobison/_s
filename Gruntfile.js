@@ -68,7 +68,8 @@ module.exports = function ( grunt ) {
                         '<%= config.src %>/js/plugins/boilerplate.js',
                         '<%= config.src %>/js/plugins/offcanvas.js',
                         'bower_components/magnific-popup/dist/jquery.magnific-popup.js',
-                        'bower_components/slick-carousel/slick/slick.js'
+                        'bower_components/slick-carousel/slick/slick.js',
+                        'bower_components/imagesloaded/imagesloaded.pkgd.js'
                     ]
                 }
             }
