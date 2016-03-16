@@ -37,7 +37,7 @@
 /// Break lines within words in order to prevent overflow for long, unbreakable
 /// strings.
 ///
-/// Spec introduces new property 'overflow-wrap', but word-break should still be treated as alternative
+/// Spec introduces new property 'overflow-wrap', but word-wrap should still be treated as alternative
 /// Reference: http://www.w3.org/TR/css3-text/#overflow-wrap
 ///
 /// Previous approach was too aggressive in that it broke words wherever.
@@ -49,6 +49,9 @@
 
     /* Non standard for webkit */
     word-break: break-word;
+    
+    /* Legacy for overflow-wrap */
+    word-wrap: break-word;
 
     overflow-wrap: break-word;
 
