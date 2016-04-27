@@ -42,7 +42,7 @@ $mq-static-breakpoint: site;
 // Base
 // ==========================================================================
 
-@import "base/normalize",
+@import "../../../bower_components/normalize-css/normalize",
         "base/hbp5",
         "base/helpers",
         "base/base",
