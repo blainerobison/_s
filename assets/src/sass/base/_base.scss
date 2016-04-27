@@ -3,8 +3,27 @@
 // Base
 // ==========================================================================
 
+// Takes a nod to HTML5 Boilerplate's opinionated styles.
+// @link: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css
+
+// Variables
+// --------------------------------------------------------------------------
+
+// Selections
+$selection-highlight-background                            : color( azure ) !default;
+$selection-highlight-color                                 : white !default;
+
+// Hr
+$hr-border-color                                           : color( ghost ) !default;
+
+
+
+
+
 html {
-    background: white;
+    background-color: white;
+    font-size: 1em;
+    line-height: 1.4;
 }
 
 /**
@@ -27,6 +46,26 @@ html {
     } /* 2 */
 }
 
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: $selection-highlight-background;
+    color: $selection-highlight-color;
+    text-shadow: none;
+}
+
+::selection {
+    background: $selection-highlight-background;
+    color: $selection-highlight-color;
+    text-shadow: none;
+}
+
 embed,
 iframe,
 object {
@@ -36,4 +75,46 @@ object {
 img {
     height: auto; /* Make sure images are scaled correctly. */
     max-width: 100%; /* Adhere to container width. */
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $hr-border-color;
+    margin: $spacer-y 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+    resize: vertical;
 }
