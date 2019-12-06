@@ -2,18 +2,13 @@
 	display: block;
 }
 
-.hentry {
+.post,
+.page {
 	margin: 0 0 1.5em;
 }
 
-.byline,
-.updated:not(.published){
+.updated:not(.published) {
 	display: none;
-}
-
-.single .byline,
-.group-blog .byline {
-	display: inline;
 }
 
 .page-content,
