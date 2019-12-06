@@ -1,14 +1,5 @@
 /*!
 Theme Name: _s
-<<<<<<< HEAD
-Author: Elevator
-Author URI: http://elevatoragency.com/
-Description: General presentation handler
-Version: 1.0
-*/
-
-/* Reference css/main.css for primary styling */
-=======
 Theme URI: https://underscores.me/
 Author: Automattic
 Author URI: https://automattic.com/
@@ -988,7 +979,7 @@ object {
 .gallery-columns-9 .gallery-item {
 	max-width: 11.11%;
 }
->>>>>>> 28f0a5b4e56a5dc3cba94749a208eb478fe224d4
 
-/* Additional CSS styling can be added below this line
-   ------------------------------------------------------------------------ */
+.gallery-caption {
+	display: block;
+}
