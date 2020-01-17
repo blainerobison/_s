@@ -35,7 +35,7 @@ function _s_hide_acf_menu( $show ) {
 
     // provide a list of usernames who can edit custom field definitions here
     $admins = array(
-        'clnt0000'
+        'admin'
     );
 
     // get the current user
