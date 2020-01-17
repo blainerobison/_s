@@ -1,0 +1,164 @@
+
+// ==========================================================================
+// Layout
+// ==========================================================================
+
+/* Containers
+   ========================================================================== */
+
+%l-constrained {
+    margin: 0 auto;
+    width: 100%;
+    max-width: $site-constraint;
+    @include clearfix;
+}
+
+.l-constrained {
+    @extend %l-constrained;
+}
+
+.l-constrained--mobile {
+    @extend %l-constrained;
+    max-width: $mobile;
+}
+
+.l-constrained--mobile-landscape {
+    @extend %l-constrained;
+    max-width: $mobile-landscape;
+}
+
+.l-constrained--mobile-wide {
+    @extend %l-constrained;
+    max-width: $mobile-wide;
+}
+
+.l-constrained--tablet {
+    @extend %l-constrained;
+    max-width: $tablet;
+}
+
+.l-constrained--tablet-landscape {
+    @extend %l-constrained;
+    max-width: $tablet-landscape;
+}
+
+.l-constrained--site {
+    @extend %l-constrained;
+    max-width: $site;
+}
+
+.l-constrained--desktop-wide {
+    @extend %l-constrained;
+    max-width: $desktop-wide;
+}
+
+.l-container {
+    @include clearfix;
+}
+
+
+
+
+
+/* Sections
+   ========================================================================== */
+
+.l-section {
+    padding: 0 .5em;
+}
+
+.l-section--xs {
+    padding: .5em;
+}
+
+.l-section--sm {
+    padding: 1em .5em;
+
+    @include mq( $until: tablet ) {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+}
+
+.l-section--md {
+    padding: 2em .5em;
+
+    @include mq( $until: tablet ) {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+}
+
+.l-section--lg {
+    padding: 3em .5em;
+
+    @include mq( $until: tablet ) {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+}
+
+.l-section--xl {
+    padding: 4em .5em;
+
+    @include mq( $until: tablet ) {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+}
+
+
+
+
+
+/* Layouts
+   ========================================================================== */
+
+.l-primary {
+    @include mq( $until: tablet ) {
+        padding-bottom: 2em;
+    }
+    @include mq( $from: tablet ) {
+        padding-right: 1.5em;
+        // @include span( 8 no-gutters );
+    }
+    @include mq( $from: site ) {
+        // @include span( 9 no-gutters );
+    }
+}
+
+.l-secondary {
+    @include mq( $from: tablet ) {
+        padding-left: 1.5em;
+        // @include span( 4 no-gutters );
+    }
+    @include mq( $from: site ) {
+        // @include span( 3 no-gutters );
+    }
+}
+
+.l-split {
+    @include mq( $until: tablet ) {
+        & + & {
+            padding-top: 1em;
+        }
+    }
+
+    @include mq( $from: tablet ) {
+        padding: 0 1em;
+
+        &:first-child {
+            padding-left: 0;
+            // @include span( 6 no-gutters first );
+        }
+
+        &:last-child {
+            padding-right: 0;
+            // @include span( 6 no-gutters last );
+        }
+    }
+}
+
+.l-split--full {
+    padding: 0;
+}

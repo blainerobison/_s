@@ -1,24 +1,40 @@
 {
   "name": "wordpress-theme",
   "version": "1.0.0",
-  "description": "WordPress theme",
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-browser-sync": "^2.1.1",
-    "grunt-contrib-concat": "^0.5.1",
-    "grunt-contrib-copy": "^0.8.0",
-    "grunt-contrib-imagemin": "^0.9.4",
-    "grunt-contrib-uglify": "^0.9.1",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-csscomb": "^3.0.0",
-    "grunt-newer": "^1.1.0",
-    "grunt-notify": "^0.4.1",
-    "grunt-sass": "^1.0.0",
-    "load-grunt-tasks": "^3.2.0",
-    "time-grunt": "^1.2.1"
+  "description": "WordPress theme using _s as it's base.",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build --prod",
+    "bundle": "gulp bundle --prod"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/blainerobison/_s.git"
+    "url": "git+https://blainerobison@github.com/blainerobison/_s.git"
+  },
+  "author": "Blaine Robison",
+  "private": true,
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.5",
+    "@babel/register": "^7.7.4",
+    "autoprefixer": "^9.7.3",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "yargs": "^15.0.2"
+  },
+  "dependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.2",
+    "normalize.css": "^8.0.1",
+    "sass-mq": "^5.0.1"
   }
 }

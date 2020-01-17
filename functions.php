@@ -7,10 +7,6 @@
  * @package _s
  */
 
-/* ==========================================================================
-   General
-   ========================================================================== */
-
 /**
  * Hooks
  */
@@ -35,4 +31,4 @@ require get_template_directory() . '/inc/template-tags.php';
 /**
  * Custom functions
  */
-require get_template_directory() . '/inc/functions.php';
+require get_template_directory() . '/inc/custom-functions.php';
